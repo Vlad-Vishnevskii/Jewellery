@@ -1,0 +1,30 @@
+.container {
+  margin: 0 auto;
+
+  @include tablets {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  @include phones {
+    padding: 0 14px;
+  }
+}
+
+.small-container {
+  width: 1173px;
+  margin: 0 auto;
+
+  @include desktop-middle {
+    width: 100%;
+  }
+
+  @include tablets {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  @include phones {
+    padding: 0 14px;
+  }
+}

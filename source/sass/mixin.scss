@@ -1,0 +1,23 @@
+@mixin desktop-middle {
+  @media screen and (max-width: 1460px) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}

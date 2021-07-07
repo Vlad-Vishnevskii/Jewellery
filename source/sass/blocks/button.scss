@@ -1,0 +1,57 @@
+.button {
+  padding: 10px 0;
+  border-radius: 5px;
+  font-family: $base-font;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  outline: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
+}
+
+.button_no-js {
+  display: none;
+}
+
+.button_white-transparent {
+  border: 1px solid $white;
+  background-color: transparent;
+}
+
+.button_blue-transparent {
+  color: $blue;
+  border: 1px solid $blue;
+  background-color: transparent;
+}
+
+
+.button_blue-fill {
+  background-color: $blue;
+  border: none;
+}
+
+.button__desktop-tablet-visible {
+  display: inline;
+
+  @include phones {
+    display: none;
+  }
+}
+
+.button__mobile-visible {
+  display: none;
+
+  @include phones {
+    display: inline;
+  }
+}

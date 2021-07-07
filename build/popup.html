@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="./fonts/PT-Mono.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/Roboto-Condensed-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/Roboto-Condensed-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <title>Smart Device</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <meta name="description" content="Smart device умные технологии">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__wrapper container">
+      <div class="header__top">
+        <picture>
+          <!-- 1х: 38px; 2x: 76px -->
+          <source type="image/webp" srcset="img/header-logo-mobile@1x.webp 1x, img/header-logo-mobile@2x.webp 2x" media="(max-width: 767px)">
+          <source srcset="img/header-logo-mobile@1x.png 1x, img/header-logo-mobile@2x.png 2x" media="(max-width: 767px)">
+          <!-- 1х: 202px; 2x: 404px -->
+          <source type="image/webp" srcset="img/header-logo-desktop_and_tablet@1x.webp 1x, img/header-logo-desktop_and_tablet@2x.webp 2x">
+          <img class="header__logo" src="img/header-logo-desktop_and_tablet@1x.png" alt="Smart Device" width="202" height="52">
+        </picture>
+        <div class="header__contacts">
+          <a class="header__link header__link_email" href="mailto:info@sd.ru" aria-label="Почта">
+            <svg width="19" height="14">
+              <use xlink:href="img/sprite_auto.svg#icon-email"></use>
+            </svg>
+            <span>
+              info@sd.ru
+            </span>
+          </a>
+          <a class="header__link header__link_phone" href="tel:+74950005252" aria-label="Телефон">
+            <svg width="18" height="18">
+              <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+            </svg>
+            <span>
+              +7 (495) 000 52 52
+            </span>
+          </a>
+          <a href="#" class="header__button button button_white-transparent button-popup-js">Заказать звонок</a>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="header__left">
+          <h1>
+            Печатные платы
+          </h1>
+          <div class="header__info">
+            <p>
+              производство и монтаж, поставка комплектующих, блоков и модулей
+            </p>
+            <a href="#" class="header__link-scroll button button_blue-fill button_scroll-js button_no-js">
+              <span class="button__desktop-tablet-visible">Получить бесплатную консультацию</span>
+              <span class="button__mobile-visible">Бесплатная консультация</span>
+            </a>
+          </div>
+          <a class="header__link-bottom header__link-bottom-no-js" href="#">Скролл вниз</a>
+        </div>
+        <div class="header__right">
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <div class="popup popup_open">
+    <div class="popup__modal feedback">
+      <h2>Закажите звонок</h2>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form action="https://echo.htmlacademy.ru">
+        <div class="popup__field popup__field_name feedback__field feedback__field_name">
+          <label for="user-name-popup">Имя</label>
+          <input id="user-name-popup" type="text" placeholder="Имя" required="" name="user-name">
+        </div>
+        <div class="popup__field popup__field_phone feedback__field feedback__field_phone">
+          <label for="user-phone-popup">Номер телефона</label>
+          <input id="user-phone-popup" type="tel" placeholder="Телефон" minlength="16" maxlength="16" required="" pattern="\+7\s?[\(][0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" name="number">
+        </div>
+        <div class="popup__field feedback__field">
+          <label for="question-popup">Ваш вопрос</label>
+          <textarea name="question" id="question-popup" placeholder="Ваш вопрос"></textarea>
+        </div>
+        <button type="submit">Отправить</button>
+        <div class="popup__field popup__field_checkbox">
+          <input type="checkbox" id="agreement-popup" required="" name="agreement-popup">
+          <label for="agreement-popup">Я согласен на обработку  персональных данных</label>
+        </div>
+        <a href="index.html" class="popup__close">
+          <svg width="16" height="16">
+            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+          </svg>
+        </a>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+.page {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.page body {
+  margin: 0;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.page main {
+  overflow: hidden;
+}
