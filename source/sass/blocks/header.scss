@@ -1,0 +1,229 @@
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $black;
+}
+
+.header__search-field {
+  display: flex;
+  width: 150px;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.header__burger-btn {
+  display: none;
+  border: none;
+  background: none;
+
+  @include tablets {
+    display: block;
+  }
+}
+
+.header__icon-search {
+  fill: $black;
+}
+
+.header__icon-burger {
+  stroke: $black;
+}
+
+.header__svg-logo {
+  fill: $brown;
+}
+
+.header__icon-cart {
+  stroke: $black;
+}
+
+.header__cart-mobile {
+  display: none;
+
+  @include tablets {
+    display: block;
+  }
+}
+
+.header__cart-mobile svg {
+  fill: transparent;
+}
+
+.header__search-field input {
+  width: 100%;
+  margin-left: 10px;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $black;
+  outline: none;
+  background: transparent;
+}
+
+.header__search-field input::placeholder {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $grey-placeholder;
+  appearance: none;
+}
+
+.header__search-field input::-webkit-input-placeholder {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $grey-placeholder;
+  appearance: none;
+}
+
+.header__search-field input::-moz-placeholder {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $grey-placeholder;
+  appearance: none;
+}
+
+.header__top-right {
+  margin-left: -15px;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.header__link {
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.header__menu {
+  @include tablets {
+    display: none;
+  }
+}
+
+.header__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid $grey;
+}
+
+.header__mobile-links {
+  display: none;
+}
+
+.header__mobile-links ul {
+  list-style: none;
+}
+
+.header__mobile-links a {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  color: $white-opacity-low;
+  text-decoration: none;
+}
+
+.header__mobile-links .header__mobile-link-login {
+  color: $white;
+  padding-left: 40px;
+}
+
+
+
+// mobile menu style
+
+.header__mobile-menu_open {
+  height: 100vh;
+  background-color: $brown;
+}
+
+.header__mobile-menu_open .header__svg-logo,
+.header__mobile-menu_open .header__icon-search {
+  fill: $white;
+}
+
+.header__mobile-menu_open .header__icon-burger,
+.header__mobile-menu_open .header__icon-cart {
+  stroke: $white;
+}
+
+.header__mobile-menu_open .header__top {
+  flex-wrap: wrap;
+}
+
+.header__mobile-menu_open .header__search-field {
+  display: flex;
+  align-items: center;
+  order: 5;
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 21px;
+
+}
+
+.header__mobile-menu_open input::placeholder {
+  color: transparent;
+}
+
+.header__mobile-menu_open input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.header__mobile-menu_open input::-moz-placeholder {
+  color: transparent;
+}
+
+.header__mobile-menu_open .header__menu {
+  display: block;
+}
+
+.header__mobile-menu_open .main-nav__list {
+  flex-direction: column;
+}
+
+.header__mobile-menu_open .main-nav__item {
+  margin-bottom: 10px;
+}
+
+.header__mobile-menu_open .main-nav__link {
+  color: $white;
+}
+
+.header__mobile-menu_open .header__bottom {
+  align-items: flex-start;
+  border: none;
+}
+
+.header__mobile-menu_open .header__mobile-links {
+  display: block;
+}

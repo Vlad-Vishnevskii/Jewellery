@@ -1,5 +1,5 @@
-@mixin desktop-middle {
-  @media screen and (max-width: 1460px) {
+@mixin desktop-min {
+  @media screen and (max-width: 1200px) {
     @content;
   }
 }
