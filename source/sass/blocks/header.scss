@@ -64,7 +64,6 @@
   margin-left: 10px;
   border: none;
   font-style: normal;
-  font-weight: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
@@ -76,7 +75,6 @@
 .header__search-field input::placeholder {
   font-family: $base-font;
   font-style: normal;
-  font-weight: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
@@ -87,7 +85,6 @@
 .header__search-field input::-webkit-input-placeholder {
   font-family: $base-font;
   font-style: normal;
-  font-weight: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
@@ -98,7 +95,6 @@
 .header__search-field input::-moz-placeholder {
   font-family: $base-font;
   font-style: normal;
-  font-weight: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
@@ -107,6 +103,9 @@
 }
 
 .header__top-right {
+  display: flex;
+  flex-wrap: wrap;
+  width: 112px;
   margin-left: -15px;
 
   @include tablets {
@@ -120,6 +119,14 @@
 }
 
 .header__menu {
+  width: 1170px;
+  display: flex;
+  justify-content: center;
+
+  @include desktop-min {
+    width: 100%;
+  }
+
   @include tablets {
     display: none;
   }
@@ -155,8 +162,6 @@
   padding-left: 40px;
 }
 
-
-
 // mobile menu style
 
 .header__mobile-menu_open {
@@ -188,7 +193,6 @@
   margin-top: 20px;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 21px;
-
 }
 
 .header__mobile-menu_open input::placeholder {

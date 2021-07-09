@@ -1,0 +1,115 @@
+.swiper {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.swiper h2 {
+  font-family: $alternative-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  color: $black;
+  text-align: center;
+}
+
+.swiper__catalog-link {
+  display: block;
+  width: 82px;
+  margin: 0 auto;
+  text-decoration: none;
+  text-align: center;
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $black;
+  border-bottom: 1px solid $brown;
+}
+
+.swiper-slide h3 {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.swiper-slide p {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 19%;
+
+  @include phones {
+    display: none;
+  }
+}
+
+.swiper-button-prev {
+  left: 0;
+
+  @include desktop-min {
+    left: 45px;
+  }
+}
+
+.swiper-button-next {
+  right: 0;
+
+  @include desktop-min {
+    right: 45px;
+  }
+}
+
+.swiper__icon-right,
+.swiper__icon-left {
+  stroke: $brown;
+}
+
+.swiper-pagination-bullet {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $grey-placeholder;
+}
+
+.swiper-pagination-bullet-active {
+  color: $black;
+}
+
+.swiper-slide img {
+  @include desktop-min {
+    height: auto;
+  }
+
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.swiper-pagination {
+  @include phones {
+    display: none;
+  }
+}
+
+.swiper-pagination-mobile {
+  display: none;
+
+
+  @include phones {
+    display: block;
+    text-align: center;
+    font-family: $base-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: $black;
+  }
+}

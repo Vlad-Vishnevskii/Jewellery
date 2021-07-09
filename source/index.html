@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="./fonts/PT-Mono.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- <link rel="preload" href="./fonts/PT-Mono.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/Roboto-Condensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./fonts/Roboto-Condensed-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Roboto-Condensed-Regular.woff2" as="font" type="font/woff2" crossorigin> -->
   <title>Jewellery</title>
   <link rel="stylesheet" href="css/style.min.css">
   <meta name="description" content="Jewellery"/>
@@ -14,7 +14,7 @@
 
 <body>
   <header class="header">
-    <div class="header__mobile-menu header__mobile-menu_open">
+    <div class="header__mobile-menu">
       <div class="header__top container">
         <button class="header__burger-btn" type="button">
           <svg class="header__icon-burger" width="25" height="16">
@@ -99,7 +99,6 @@
             <a class="header__mobile-link-login" href="#">
               Login
             </a>
-
           </div>
         </nav>
       </div>
@@ -114,7 +113,6 @@
           <img class="header__logo" src="img/header-logo-desktop_and_tablet@1x.png" alt="Smart Device" width="202" height="52">
         </picture> -->
   </header>
-
   <main>
     <section class="main-title">
       <h1>
@@ -124,13 +122,222 @@
         made to be yours
       </p>
     </section>
+    <section class="swiper container">
+      <h2>New In</h2>
+      <a class="swiper__catalog-link" href="#">Shop Now</a>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev">
+        <svg class="swiper__icon-left" width="29" height="9">
+          <use xlink:href="img/sprite_auto.svg#icon-left-arrow"></use>
+        </svg>
+      </div>
+      <div class="swiper-button-next">
+        <svg class="swiper__icon-right" width="29" height="9">
+          <use xlink:href="img/sprite_auto.svg#icon-right-arrow"></use>
+        </svg>
+      </div>
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="img/purple-gemstone-necklace-desktop@1x.png" width="270" height="284" alt="purple gemstone necklace">
+            <h3>
+              Necklace with amethyst
+            </h3>
+            <p>$ 145</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/layered-choker-necklace-desktop@1x.png" width="270" height="284" alt="layered choker necklace">
+            <h3>
+              Layered сhoker
+            </h3>
+            <p>
+              $ 115
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/dainty-gold-necklace-desktop@1x.png" width="270" height="284" alt="gold necklace">
+            <h3>Gold chain</h3>
+            <p>$ 215</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/galaxy-earrings-desktop@1x.png" width="270" height="284" alt="galaxy earrings">
+            <h3>Galaxy earrings</h3>
+            <p>$ 95</p>
+          </div>
+          <div class="swiper-slide">
+            Slide 5
+            <img src="" alt="">
+            <h3></h3>
+            <p></p>
+          </div>
+          <div class="swiper-slide">
+            Slide 6
+            <img src="" alt="">
+            <h3></h3>
+            <p></p>
+          </div>
+          <div class="swiper-slide">
+            Slide 7
+            <img src="" alt="">
+            <h3></h3>
+            <p></p>
+          </div>
+          <div class="swiper-slide">
+            Slide 8
+            <img src="" alt="">
+            <h3></h3>
+            <p></p>
+          </div>
+          <div class="swiper-slide">
+            Slide 9
+            <img src="" alt="">
+            <h3></h3>
+            <p></p>
+          </div>
+          <div class="swiper-slide">
+            Slide 10
+            <img src="" alt="">
+            <h3></h3>
+            <p></p>
+          </div>
+          <div class="swiper-slide">
+            Slide 11
+            <img src="" alt="">
+            <h3></h3>
+            <p></p>
+          </div>
+          <div class="swiper-slide">
+            Slide 12
+            <img src="" alt="">
+            <h3></h3>
+            <p></p>
+          </div>
+
+        </div>
+        <!--pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="swiper-pagination-mobile">
+        <span class="swiper-pagination-mobile__start-index">1</span>
+        <span>of</span>
+        <span class="swiper-pagination-mobile__length">10</span>
+      </div>
+    </section>
+
+    <section>
+
+    </section>
   </main>
 
-  <footer>
+  <footer class="footer">
+    <div class="footer__wrapper container">
+      <div class="footer__left">
+        <h2>
+          The good stuff in your inbox
+        </h2>
+        <p>
+          News and updates from CH. No spam, we promise.
+        </p>
+        <form action="">
+          <div class="footer__input-field">
+            <label for=""></label>
+            <input type="email" placeholder="Your E-mail">
+          </div>
+          <button type="submit">
+            Sign Up
+            <svg class="footer__icon-right-arrow" width="29" height="9">
+              <use xlink:href="img/sprite_auto.svg#icon-right-arrow"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="footer__right">
+        <ul class="footer__list-link-left">
+          <li>
+            <a href="#">
+              Ordering & Payment
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Terms & Conditions
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Returns & Exchanges
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Delivery
+            </a>
+          </li>
+        </ul>
+        <ul class="footer__list-link-center">
+          <li>
+            <a href="#">
+              About CH
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Stores & Hours
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Jobs
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Contact Us
+            </a>
+          </li>
+        </ul>
+        <ul class="footer__list-link-right">
+          <li>
+            <a href="#">
+              <svg class="footer__icon-facebook" width="8" height="15">
+                <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+              </svg>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg class="footer__icon-instagram" width="15" height="15">
+                <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg class="footer__icon-pinterest" width="15" height="15">
+                <use xlink:href="img/sprite_auto.svg#icon-pinterest"></use>
+              </svg>
+              <span>Pinterest</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg class="footer__icon-twitter" width="15" height="13">
+                <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+              </svg>
+              <span>Twitter</span>
+            </a>
+          </li>
+      </ul>
 
+      </div>
+    </div>
   </footer>
 
-
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 
 </body>

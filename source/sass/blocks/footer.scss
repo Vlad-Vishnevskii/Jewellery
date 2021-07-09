@@ -1,0 +1,201 @@
+.footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: $regular-black;
+  color: $white;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @include tablets {
+    justify-content: initial;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.footer__left {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+
+  @include desktop-min {
+    width: 45%;
+  }
+
+  @include tablets {
+    width: 80%;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.footer__left h2 {
+  margin-bottom: 10px;
+  font-family: $alternative-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  text-align: center;
+
+  @include tablets {
+    text-align: left;
+  }
+}
+
+.footer__left p {
+  width: 398px;
+  margin-top: 0;
+  margin-left: 60px;
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
+  color: $grey-placeholder;
+
+  @include desktop-min {
+    width: auto;
+    margin-left: 0;
+  }
+
+  @include tablets {
+    text-align: left;
+  }
+}
+
+.footer__left form {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $white;
+  margin-bottom: 10px;
+}
+
+.footer__input-field {
+  width: 370px;
+
+  @include desktop-min {
+    width: auto;
+  }
+}
+
+.footer__input-field input {
+  background-color: transparent;
+  border: none;
+  color: $white;
+  width: 100%;
+}
+
+.footer__icon-right-arrow {
+  stroke: $white;
+}
+
+.footer__left button {
+  border: none;
+  background-color: transparent;
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $white;
+
+  @include phones {
+    width: 115px;
+  }
+}
+
+.footer__right {
+  display: flex;
+  justify-content: space-between;
+  width: 585px;
+
+  @include desktop-min {
+    margin-top: 50px;
+    width: 50%;
+  }
+
+  @include tablets {
+    width: 80%;
+  }
+
+  @include phones {
+    flex-direction: column;
+    justify-content: initial;
+    width: 100%;
+  }
+}
+
+.footer__right li {
+  margin-bottom: 25px;
+}
+
+.footer__right a {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $white;
+  text-decoration: none;
+}
+
+.footer__list-link-left,
+.footer__list-link-center,
+.footer__list-link-right {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__list-link-right {
+  @include phones {
+    display: flex;
+  }
+}
+
+.footer__list-link-right span {
+  @include phones {
+    display: none;
+  }
+}
+
+
+.footer__list-link-right svg {
+  margin-right: 10px;
+}
+
+
+.footer__icon-facebook {
+  @include phones {
+    width: 12px;
+    height: 21px;
+  }
+}
+
+.footer__icon-instagram {
+  @include phones {
+    width: 20px;
+    height: 21px;
+  }
+}
+
+.footer__icon-pinterest {
+  @include phones {
+    width: 20px;
+    height: 21px;
+  }
+}
+
+.footer__icon-twitter {
+  @include phones {
+    width: 20px;
+    height: 18px;
+  }
+}
