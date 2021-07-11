@@ -1,10 +1,16 @@
 .swiper {
   position: relative;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
+
+  @include tablets {
+    padding-top: 49px;
+  }
 }
 
 .swiper h2 {
+  margin-top: 20px;
+  margin-bottom: 24px;
   font-family: $alternative-font;
   font-style: normal;
   font-weight: bold;
@@ -12,6 +18,14 @@
   line-height: 130%;
   color: $black;
   text-align: center;
+}
+
+.swiper-container {
+  padding: 63px 0;
+
+  @include tablets {
+    padding: 54px 0;
+  }
 }
 
 .swiper__catalog-link {
@@ -41,7 +55,11 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  top: 19%;
+  top: 22%;
+
+  @include tablets {
+    top: 120px;
+  }
 
   @include phones {
     display: none;
@@ -49,24 +67,36 @@
 }
 
 .swiper-button-prev {
-  left: 0;
+  left: -3px;
+  width: 31px;
 
   @include desktop-min {
     left: 45px;
+  }
+
+  @include tablets {
+    width: 36px;
   }
 }
 
 .swiper-button-next {
   right: 0;
+  width: 31px;
 
   @include desktop-min {
     right: 45px;
+  }
+
+  @include tablets {
+    width: 36px;
   }
 }
 
 .swiper__icon-right,
 .swiper__icon-left {
   stroke: $brown;
+  width: 36px;
+  height: 15px;
 }
 
 .swiper-pagination-bullet {
@@ -80,6 +110,10 @@
 
 .swiper-pagination-bullet-active {
   color: $black;
+}
+
+.swiper-slide h3 {
+  margin-top: 15px;
 }
 
 .swiper-slide img {
@@ -98,9 +132,12 @@
   }
 }
 
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 6px;
+}
+
 .swiper-pagination-mobile {
   display: none;
-
 
   @include phones {
     display: block;

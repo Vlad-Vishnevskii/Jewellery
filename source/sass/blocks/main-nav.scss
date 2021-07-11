@@ -2,13 +2,20 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin-left: -34px;
+  margin-left: -66px;
+  margin-top: 19px;
+  margin-bottom: 8px;
 }
 
 .main-nav__item {
-  margin-left: 34px;
+  margin-left: 33px;
   margin-bottom: 10px;
 }
+
+.main-nav__item:nth-of-type(3) {
+  margin-left: 38px;
+}
+
 
 .main-nav__link {
   text-decoration: none;

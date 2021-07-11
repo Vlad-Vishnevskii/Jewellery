@@ -1,20 +1,26 @@
 .header__top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-top: 20px;
-  padding-bottom: 15px;
+  padding-bottom: 18px;
   font-family: $base-font;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   color: $black;
+
+  @include tablets {
+    padding-bottom: 28px;
+    align-items: flex-start;
+  }
 }
 
 .header__search-field {
   display: flex;
-  width: 150px;
+  align-items: flex-start;
+  width: 176px;
+  margin-top: 22px;
 
   @include tablets {
     display: none;
@@ -27,7 +33,10 @@
   background: none;
 
   @include tablets {
+    padding: 0;
     display: block;
+    margin-top: 35px;
+    margin-left: -2px;
   }
 }
 
@@ -41,6 +50,12 @@
 
 .header__svg-logo {
   fill: $brown;
+  margin-top: 10px;
+  margin-right: 59px;
+
+  @include tablets {
+    margin-right: 11px;
+  }
 }
 
 .header__icon-cart {
@@ -52,6 +67,7 @@
 
   @include tablets {
     display: block;
+    margin-top: 35px;
   }
 }
 
@@ -105,8 +121,10 @@
 .header__top-right {
   display: flex;
   flex-wrap: wrap;
-  width: 112px;
-  margin-left: -15px;
+  align-items: flex-start;
+  width: 158px;
+  margin-top: 22px;
+  margin-left: -37px;
 
   @include tablets {
     display: none;
@@ -115,7 +133,7 @@
 
 .header__link {
   text-decoration: none;
-  margin-left: 15px;
+  margin-left: 37px;
 }
 
 .header__menu {

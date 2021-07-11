@@ -1,0 +1,103 @@
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 57px;
+
+  @include tablets {
+    padding-top: 10px;
+    padding-bottom: 58px;
+  }
+}
+
+.questions h2 {
+  font-family: $alternative-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  color: $black;
+  letter-spacing: 1px;
+
+  @include phones {
+    text-align: center;
+  }
+}
+
+.questions h3 {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  color: $black;
+  margin-bottom: 0;
+
+  @include phones {
+    width: 85%;
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
+
+.questions__list {
+  width: 970px;
+  padding: 0;
+  list-style: none;
+
+  @include desktop-min {
+    width: 100%;
+  }
+}
+
+.questions__item {
+  border: 1px solid $brown;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.questions__item_no-js {
+  cursor: initial;
+}
+
+.questions__item-text {
+  padding-top: 27px;
+  padding-bottom: 42px;
+  padding-left: 41px;
+  padding-right: 51px;
+
+  @include phones {
+    padding: 5px 25px;
+  }
+}
+
+.questions__item:last-of-type {
+  border-bottom: 1px solid $brown;
+}
+
+.questions__answer {
+  width: 527px;
+  margin-top: 10px;
+  padding-left: 6px;
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+  color: $black;
+
+  @include desktop-min {
+    width: 80%;
+  }
+
+  @include phones {
+    width: 90%;
+    font-size: 14px;
+    line-height: 140%;
+  }
+}
+
+.questions__icon {
+  fill: $white;
+}
