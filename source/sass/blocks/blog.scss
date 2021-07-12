@@ -5,7 +5,7 @@
   padding-bottom: 48px;
 
   @include tablets {
-    padding-bottom: 30px;
+    padding-bottom: 19px;
   }
 }
 
@@ -17,6 +17,12 @@
   font-size: 34px;
   line-height: 130%;
   color: $black;
+}
+
+.blog__link {
+  @include tablets {
+    padding-bottom: 3px;
+  }
 }
 
 .blog__card-list {
@@ -41,6 +47,12 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-top: 61px;
+    gap: initial;
+  }
+
+  @include phones {
+    margin-top: 48px;
   }
 }
 
@@ -53,15 +65,23 @@
     height: 300px;
     background-size: 339px 300px;
     width: 678px;
+    margin-bottom: 50px;
   }
 
   @include phones {
     width: 290px;
+    margin-bottom: 40px;
     background-size: 290px 256px;
     flex-direction: column;
     justify-content: flex-end;
     min-height: 512px;
     background-position: top;
+  }
+}
+
+.blog__card-item:nth-of-type(2) {
+  @include tablets {
+    margin-bottom: 0;
   }
 }
 
@@ -146,8 +166,14 @@
     justify-content: center;
   }
 
+  @include tablets {
+    justify-content: initial;
+  }
+
   @include phones {
     width: 100%;
+    min-height: 256px;
+    padding: 5px 0;
   }
 }
 
@@ -171,6 +197,14 @@
   line-height: 130%;
   color: $grey-placeholder;
   margin-bottom: 0;
+
+  @include tablets {
+    margin-top: 49px;
+  }
+
+  @include phones {
+    margin-top: 41px;
+  }
 }
 
 .blog__card-info h3 {
@@ -184,6 +218,15 @@
   line-height: 130%;
   color: $regular-black;
   text-align: center;
+
+  @include tablets {
+    width: 50%;
+  }
+
+  @include phones {
+    width: 60%;
+    margin-bottom: 41px;
+  }
 }
 
 .blog__card-item a {
@@ -191,5 +234,15 @@
 }
 
 .blog__card-item_big .blog__card-info {
-  padding-top: 50px
+  padding-top: 50px;
+
+  @include tablets {
+    padding-top: 36px;
+  }
+}
+
+.blog__card-item_big p {
+  @include phones {
+    margin-top: 26px;
+  }
 }

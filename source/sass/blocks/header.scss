@@ -14,6 +14,10 @@
     padding-bottom: 28px;
     align-items: flex-start;
   }
+
+  @include phones {
+    padding-bottom: 19px;
+  }
 }
 
 .header__search-field {
@@ -38,6 +42,10 @@
     margin-top: 35px;
     margin-left: -2px;
   }
+
+  @include phones {
+    margin-top: 17px;
+  }
 }
 
 .header__icon-search {
@@ -56,6 +64,12 @@
   @include tablets {
     margin-right: 11px;
   }
+
+  @include phones {
+    width: 52px;
+    height: 52px;
+    margin-top: 0;
+  }
 }
 
 .header__icon-cart {
@@ -68,6 +82,10 @@
   @include tablets {
     display: block;
     margin-top: 35px;
+  }
+
+  @include phones {
+    margin-top: 18px;
   }
 }
 
@@ -176,76 +194,145 @@
 }
 
 .header__mobile-links .header__mobile-link-login {
+  display: block;
   color: $white;
-  padding-left: 40px;
+  padding-left: 45px;
+  margin-top: 44px;
+
+  @include phones {
+    padding-left: 15px;
+    margin-top: 32px;
+  }
 }
 
 // mobile menu style
 
+.header__mobile-menu_no-js {
+  height: 77vh;
+  background-color: $brown;
+  padding-bottom: 80px;
+}
+
 .header__mobile-menu_open {
   height: 100vh;
   background-color: $brown;
+  overflow-y: scroll;
+  padding-bottom: 80px;
 }
 
 .header__mobile-menu_open .header__svg-logo,
-.header__mobile-menu_open .header__icon-search {
+.header__mobile-menu_open .header__icon-search,
+.header__mobile-menu_no-js .header__svg-logo,
+.header__mobile-menu_no-js .header__icon-search {
   fill: $white;
 }
 
+.header__mobile-menu_open .header__icon-search,
+.header__mobile-menu_no-js .header__icon-search {
+  width: 17px;
+  height: 17px;
+  margin-top: 7px;
+}
+
 .header__mobile-menu_open .header__icon-burger,
-.header__mobile-menu_open .header__icon-cart {
+.header__mobile-menu_open .header__icon-cart,
+.header__mobile-menu_no-js .header__icon-burger,
+.header__mobile-menu_no-js .header__icon-cart {
   stroke: $white;
 }
 
-.header__mobile-menu_open .header__top {
+.header__mobile-menu_open .header__top,
+.header__mobile-menu_no-js .header__top {
   flex-wrap: wrap;
 }
 
-.header__mobile-menu_open .header__search-field {
+.header__mobile-menu_open .header__search-field,
+.header__mobile-menu_no-js .header__search-field {
   display: flex;
   align-items: center;
   order: 5;
   width: 100%;
-  height: 30px;
+  height: 39px;
   padding-left: 10px;
-  margin-top: 20px;
+  margin-top: 40px;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 21px;
+
+  @include phones {
+    margin-top: 30px;
+  }
 }
 
-.header__mobile-menu_open input::placeholder {
+.header__mobile-menu_open input::placeholder,
+.header__mobile-menu_no-js input::placeholder  {
   color: transparent;
 }
 
-.header__mobile-menu_open input::-webkit-input-placeholder {
+.header__mobile-menu_open input::-webkit-input-placeholder,
+.header__mobile-menu_no-js input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.header__mobile-menu_open input::-moz-placeholder {
+.header__mobile-menu_open input::-moz-placeholder,
+.header__mobile-menu_no-js input::-moz-placeholder {
   color: transparent;
 }
 
-.header__mobile-menu_open .header__menu {
+.header__mobile-menu_open .header__menu,
+.header__mobile-menu_no-js .header__menu {
   display: block;
 }
 
-.header__mobile-menu_open .main-nav__list {
+.header__mobile-menu_open .main-nav__list,
+.header__mobile-menu_no-js .main-nav__list {
   flex-direction: column;
+  margin-left: -26px;
 }
 
-.header__mobile-menu_open .main-nav__item {
-  margin-bottom: 10px;
+.header__mobile-menu_open .main-nav__item,
+.header__mobile-menu_no-js .main-nav__item {
+  margin-bottom: 21px;
 }
 
-.header__mobile-menu_open .main-nav__link {
+.header__mobile-menu_open .main-nav__link,
+.header__mobile-menu_no-js .main-nav__link {
   color: $white;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
 }
 
-.header__mobile-menu_open .header__bottom {
+.header__mobile-menu_open .main-nav__item:nth-of-type(3),
+.header__mobile-menu_no-js .main-nav__item:nth-of-type(3) {
+  margin-left: 33px;
+
+  @include phones {
+    margin-left: 0;
+  }
+}
+
+.header__mobile-menu_open .header__bottom,
+.header__mobile-menu_no-js .header__bottom {
   align-items: flex-start;
   border: none;
 }
 
-.header__mobile-menu_open .header__mobile-links {
+.header__mobile-menu_open .header__mobile-links,
+.header__mobile-menu_no-js .header__mobile-links {
   display: block;
+  padding: 0;
+}
+
+.header__mobile-links ul {
+  padding: 0;
+  padding-left: 44px;
+
+  @include phones {
+    padding-left: 15px;
+    margin-top: 5px;
+  }
+}
+
+.header__mobile-links li {
+  margin-bottom: 22px;
 }

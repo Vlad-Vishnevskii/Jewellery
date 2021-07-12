@@ -45,6 +45,12 @@
   @include tablets {
     margin-right: 15px;
   }
+
+  @include phones {
+    margin-right: 0;
+    margin-top: 189px;
+    font-size: 38px;
+  }
 }
 
 .main-title p {
@@ -57,5 +63,10 @@
 
   @include tablets {
     margin-right: 15px;
+  }
+
+  @include phones {
+    margin-right: 0;
+    font-size: 34px;
   }
 }

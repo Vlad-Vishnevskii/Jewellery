@@ -3,6 +3,10 @@
   padding-bottom: 100px;
   background-color: $regular-black;
   color: $white;
+
+  @include tablets {
+    padding-top: 41px;
+  }
 }
 
 .footer__wrapper {
@@ -26,7 +30,7 @@
   }
 
   @include tablets {
-    width: 80%;
+    width: 83%;
   }
 
   @include phones {
@@ -47,6 +51,11 @@
   @include tablets {
     text-align: left;
   }
+
+  @include phones {
+    width: 80%;
+    margin-bottom: 15px;
+  }
 }
 
 .footer__left p {
@@ -66,6 +75,10 @@
 
   @include tablets {
     text-align: left;
+  }
+
+  @include phones {
+    width: 80%;
   }
 }
 
@@ -109,7 +122,7 @@
   color: $white;
 
   @include phones {
-    width: 115px;
+    width: 108px;
   }
 }
 
@@ -124,7 +137,8 @@
   }
 
   @include tablets {
-    width: 80%;
+    width: 84%;
+    margin-top: 22px;
   }
 
   @include phones {
@@ -157,12 +171,28 @@
 
 .footer__list-link-center {
   width: 154px;
+
+  @include tablets {
+    width: 21%;
+  }
+
+  @include phones {
+    width: 100%;
+    margin-top: 2px;
+  }
 }
 
 .footer__list-link-right {
   @include phones {
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left: -19px;
   }
+}
+
+.footer__list-link-right li {
+  margin-left: 19px;
 }
 
 .footer__list-link-right span {

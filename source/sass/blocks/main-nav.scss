@@ -10,6 +10,10 @@
 .main-nav__item {
   margin-left: 33px;
   margin-bottom: 10px;
+
+  @include phones {
+    margin-left: 0;
+  }
 }
 
 .main-nav__item:nth-of-type(3) {

@@ -6,6 +6,9 @@
   var burgerBtn = document.querySelector('.header__burger-btn');
   var body = document.querySelector('body');
 
+  if (mobileMenu.classList.contains('header__mobile-menu_no-js')) {
+    mobileMenu.classList.remove('header__mobile-menu_no-js');
+  }
 
   function onBurgerClick () {
     mobileMenu.classList.toggle('header__mobile-menu_open');
@@ -66,12 +69,7 @@
     paginationMobileStartIndex.textContent = (swiper.realIndex / 2) + 1;
   });
 
-
-
-
-
   //accordion
-
 
   var accordionsNoJS = document.querySelectorAll('.accordion_no-js');
   var accordionContentNoJS = document.querySelectorAll('.accordion__content_no-js');
