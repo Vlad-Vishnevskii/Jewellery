@@ -129,6 +129,7 @@
 .footer__right {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 579px;
 
   @include desktop-min {
@@ -139,6 +140,7 @@
   @include tablets {
     width: 84%;
     margin-top: 22px;
+
   }
 
   @include phones {
@@ -170,15 +172,17 @@
 }
 
 .footer__list-link-center {
-  width: 154px;
+  width: 138px;
 
   @include tablets {
     width: 21%;
+    margin-left: 24px;
   }
 
   @include phones {
     width: 100%;
     margin-top: 2px;
+    margin-left: 0;
   }
 }
 

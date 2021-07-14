@@ -1,57 +1,22 @@
 .button {
-  padding: 10px 0;
-  border-radius: 5px;
+  padding: 24px 0;
+  background-color: $brown;
   font-family: $base-font;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
   text-align: center;
-  text-transform: uppercase;
   color: $white;
   outline: none;
-
-  &:hover {
-    opacity: 0.5;
-  }
-
-  &:focus {
-    opacity: 0.3;
-  }
-}
-
-.button_no-js {
-  display: none;
-}
-
-.button_white-transparent {
-  border: 1px solid $white;
-  background-color: transparent;
-}
-
-.button_blue-transparent {
-  color: $blue;
-  border: 1px solid $blue;
-  background-color: transparent;
-}
-
-
-.button_blue-fill {
-  background-color: $blue;
+  border-radius: none;
   border: none;
-}
+  cursor: pointer;
 
-.button__desktop-tablet-visible {
-  display: inline;
+  // &:hover {
+  //   opacity: 0.5;
+  // }
 
-  @include phones {
-    display: none;
-  }
-}
-
-.button__mobile-visible {
-  display: none;
-
-  @include phones {
-    display: inline;
-  }
+  // &:focus {
+  //   opacity: 1;
+  // }
 }

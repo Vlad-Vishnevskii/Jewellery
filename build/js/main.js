@@ -63,11 +63,14 @@
 
   var paginationMobileLength = document.querySelector('.swiper-pagination-mobile__length');
   var paginationMobileStartIndex = document.querySelector('.swiper-pagination-mobile__start-index');
-  paginationMobileLength.textContent = (swiper.slides.length - 4) / 2;
 
-  swiper.on('transitionEnd', function() {
-    paginationMobileStartIndex.textContent = (swiper.realIndex / 2) + 1;
-  });
+  if (paginationMobileLength && paginationMobileStartIndex) {
+    paginationMobileLength.textContent = (swiper.slides.length - 4) / 2;
+
+    swiper.on('transitionEnd', function() {
+      paginationMobileStartIndex.textContent = (swiper.realIndex / 2) + 1;
+    });
+  }
 
   //accordion
 
@@ -75,8 +78,7 @@
   var accordionContentNoJS = document.querySelectorAll('.accordion__content_no-js');
   var questionsItemNoJS = document.querySelectorAll('.questions__item_no-js');
   var accordions = document.querySelectorAll('.accordion');
-
-  console.log(accordions)
+  var filter = document.querySelector('.filter');
 
   function deleteNoJS() {
     for (var i = 0; i < accordionsNoJS.length; i++) {
@@ -105,5 +107,60 @@
       }
     });
   });
+
+  // accordion filter
+
+  function filterAccordion (evt) {
+    var target = evt.target;
+    console.log(target)
+    if (target.closest('.filter__trigger')) {
+      var filterName = target.closest('.filter__type');
+      filterName.classList.toggle('filter__type_active');
+    }
+  }
+
+  filter.addEventListener('click', filterAccordion)
+
+  // open filter modal
+
+  var filterOpenBtn = document.querySelector('.catalog__filter-btn-mobile');
+  var catalogFilter = document.querySelector('.catalog__filter');
+  var closeBtn = document.querySelector('.filter__close-btn-mobile');
+
+  if (catalogFilter) {
+
+    function openFilterModal () {
+      catalogFilter.classList.add('catalog__filter-mobile_open');
+      body.classList.add('disable-scrolling-js');
+      closeBtn.addEventListener('click', onCloseButtonClick);
+      catalogFilter.addEventListener('click', onOverlayClick);
+    }
+
+    function closeFilterModal () {
+      catalogFilter.classList.remove('catalog__filter-mobile_open');
+      body.classList.remove('disable-scrolling-js');
+      closeBtn.removeEventListener('click', onCloseButtonClick);
+      catalogFilter.removeEventListener('click', onOverlayClick);
+    }
+
+    function onOpenBtnFilterClick () {
+      openFilterModal();
+    }
+
+    function onCloseButtonClick() {
+      closeFilterModal();
+    }
+
+    function onOverlayClick(evt) {
+      var target = evt.target;
+      if (target.classList.contains('catalog__filter')) {
+        closeFilterModal();
+      }
+    }
+    filterOpenBtn.addEventListener('click', onOpenBtnFilterClick)
+  }
+
+
+
 
 })();

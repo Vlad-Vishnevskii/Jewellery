@@ -1,0 +1,255 @@
+.filter__type {
+  border: 1px solid $brown;
+  border-bottom: none;
+  padding-bottom: 8px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  @include tablets {
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.filter__type:first-of-type {
+  padding-bottom: 13px;
+
+  @include tablets {
+    border-top: none;
+  }
+}
+
+.filter__type:nth-of-type(4) {
+  padding-bottom: 3px;
+}
+
+.filter__type h3 {
+  margin-top: 23px;
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  }
+
+.filter form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+
+  @include tablets {
+    z-index: 5;
+  }
+}
+
+.filter__field {
+  margin-bottom: 12px;
+}
+
+.filter__type:last-of-type {
+  border-bottom: 1px solid $brown;
+}
+
+.filter__content {
+  display: none;
+  padding-top: 10px;
+  padding-left: 32px;
+}
+
+.filter__icon {
+  fill: $white;
+}
+
+.filter__trigger {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.filter__trigger button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.filter__type_active .filter__content {
+  display: block;
+}
+
+.filter__type_active button {
+  transform: rotate(180deg);
+}
+
+.filter__field label {
+  position: relative;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: $black;
+}
+
+.filter__field input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.filter__field input + label::before {
+  position: absolute;
+  top: 0;
+  left: -25px;
+  content: "";
+  display: block;
+  border: 1px solid $brown;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  cursor: pointer;
+}
+
+.filter__field input:checked + label::before {
+  background-color: $brown;
+}
+
+.filter__range {
+  margin-left: -10px;
+  margin-top: -3px;
+}
+
+.filter__range-controls {
+  position: relative;
+}
+
+.filter__scale {
+  position: relative;
+  display: block;
+  height: 2px;
+  background: $beige;
+}
+
+.filter__bar {
+  position: absolute;
+  left: 31px;
+  display: block;
+  height: 2px;
+  background-color: $brown;
+  width: 59%;
+
+  @include tablets {
+    left: 42px;
+    width: 53%;
+  }
+
+  @include phones {
+    left: 38px;
+    width: 55%;
+  }
+}
+
+.filter__toggle {
+  position: absolute;
+  top: -7px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $brown;
+  cursor: pointer;
+}
+
+.filter__toggle_min {
+  left: 12%;
+}
+
+.filter__toggle_max {
+  left: 71%;
+
+  @include tablets {
+    left: 214px;
+  }
+
+  @include phones {
+    left: 143px;
+  }
+}
+
+.filter__price-value {
+  margin-top: 25px;
+}
+
+.filter__price-value {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 13px;
+  padding-left: 16px;
+  padding-right: 26px;
+  padding-bottom: 14px;
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: $black;
+
+  @include tablets {
+    padding-left: 33px;
+    padding-right: 105px;
+  }
+
+  @include phones {
+    padding-left: 15px;
+    padding-right: 40px;
+  }
+}
+
+.filter__apply-btn {
+  margin-top: 38px;
+
+  @include tablets {
+    width: 362px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include phones {
+    width: 230px;
+  }
+}
+
+.filter__reset-btn {
+  margin-top: 25px;
+  background-color: transparent;
+  color: $black;
+  border: 1px solid $brown;
+
+  @include tablets {
+    width: 362px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include phones {
+    width: 230px;
+  }
+}
+
+.filter__close-btn-mobile {
+  display: none;
+
+  @include tablets {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: $black;
+  }
+}

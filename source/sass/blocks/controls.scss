@@ -1,0 +1,106 @@
+.controls {
+  padding-top: 37px;
+  padding-bottom: 74px;
+  border-top: 1px solid $grey;
+
+  @include phones {
+    border-top: none;
+    padding-top: 20px;
+    padding-bottom: 64px;
+  }
+}
+
+.controls__wrapper {
+  position: relative;
+  left: 148px;
+  display: flex;
+  justify-content: space-between;
+  width: 870px;
+
+  @include desktop-min {
+    width: 730px;
+    left: 136px;
+  }
+
+  @include tablets {
+    position: static;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  @include phones {
+    justify-content: center;
+  }
+}
+
+.controls__pagination {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 240px;
+  padding: 0;
+  margin: 0;
+  padding-left: 23px;
+
+  @include tablets {
+    width: 150px;
+    padding-left: 0;
+  }
+
+  @include phones {
+    width: 179px;
+  }
+}
+
+.controls__pagination li {
+  margin-left: 13px;
+
+  @include phones {
+    margin-left: 23px;
+  }
+}
+
+.controls__pagination-item {
+  text-decoration: none;
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $grey-placeholder;
+}
+
+.controls__pagination-item_active {
+  color: $black;
+}
+
+.controls__previous,
+.controls__next {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $black;
+  text-decoration: none;
+
+  @include phones {
+    display: none;
+  }
+}
+
+.controls__previous {
+  padding-right: 50px;
+
+  @include tablets {
+    padding-right: 0;
+  }
+}
+
+.controls__next {
+  padding-left: 10px;
+
+  @include tablets {
+    padding-left: 5px;
+  }
+}
