@@ -79,6 +79,8 @@
   var questionsItemNoJS = document.querySelectorAll('.questions__item_no-js');
   var accordions = document.querySelectorAll('.accordion');
   var filter = document.querySelector('.filter');
+  var filterMobileNoJs = document.querySelectorAll('.catalog__filter-mobile_no-js');
+  var catalogNoJs = document.querySelectorAll('.catalog__no-js');
 
   function deleteNoJS() {
     for (var i = 0; i < accordionsNoJS.length; i++) {
@@ -89,6 +91,14 @@
     }
     for (var k = 0; k < questionsItemNoJS.length; k++) {
       questionsItemNoJS[k].classList.remove('questions__item_no-js');
+    }
+
+    for (var i = 0; i < filterMobileNoJs.length; i++) {
+      filterMobileNoJs[i].classList.remove('catalog__filter-mobile_no-js');
+    }
+
+    for (var i = 0; i < catalogNoJs.length; i++) {
+      catalogNoJs[i].classList.remove('catalog__no-js');
     }
   }
 
@@ -110,16 +120,18 @@
 
   // accordion filter
 
-  function filterAccordion (evt) {
-    var target = evt.target;
-    console.log(target)
-    if (target.closest('.filter__trigger')) {
-      var filterName = target.closest('.filter__type');
-      filterName.classList.toggle('filter__type_active');
+  if (filter) {
+    function filterAccordion (evt) {
+      var target = evt.target;
+      console.log(target)
+      if (target.closest('.filter__trigger')) {
+        var filterName = target.closest('.filter__type');
+        filterName.classList.toggle('filter__type_active');
+      }
     }
-  }
 
-  filter.addEventListener('click', filterAccordion)
+    filter.addEventListener('click', filterAccordion)
+  }
 
   // open filter modal
 
@@ -159,8 +171,5 @@
     }
     filterOpenBtn.addEventListener('click', onOpenBtnFilterClick)
   }
-
-
-
 
 })();

@@ -5,6 +5,7 @@
 
   @include tablets {
     padding-top: 52px;
+    flex-direction: column;
   }
 
   @include phones {
@@ -134,6 +135,32 @@
   @include phones {
     margin-bottom: 38px;
   }
+}
+
+.catalog__filter-mobile_no-js {
+  display: block;
+}
+
+.catalog__filter-mobile_no-js form {
+  @include tablets {
+    margin-top: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  @include phones {
+    display: block;
+    width: 280px;
+    margin-top: 0;
+  }
+}
+
+.catalog__filter-mobile_no-js .catalog__filter-close-btn {
+  display: none;
+}
+
+.catalog__no-js .catalog__filter-btn-mobile {
+  display: none;
 }
 
 .catalog__filter-mobile_open {

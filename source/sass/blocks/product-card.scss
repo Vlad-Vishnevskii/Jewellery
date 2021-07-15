@@ -1,0 +1,278 @@
+.product-card {
+  border-top: 1px solid $grey;
+  padding-top: 80px;
+
+  @include tablets {
+    border-top: none;
+    padding-top: 33px;
+  }
+
+  @include phones {
+    padding-top: 0;
+  }
+}
+
+.product-card__wrapper {
+  display: flex;
+
+  @include desktop-min {
+    justify-content: center;
+  }
+
+  @include tablets {
+    justify-content: space-between;
+  }
+
+  @include phones {
+    flex-direction: column;
+    justify-content: initial;
+    align-items: center;
+  }
+}
+
+.product-card__gallery-list {
+  display: grid;
+  grid-template-columns: 100px 470px;
+  grid-template-rows: 125px 125px 125px;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  margin-right: 100px;
+  list-style: none;
+
+  @include desktop-min {
+    grid-template-columns: 97px 319px;
+    margin-right: 30px;
+  }
+
+  @include tablets {
+    grid-template-columns: 97px 97px 97px;
+    grid-template-rows: 286px 129px;
+    gap: 14px;
+    margin-right: 0;
+  }
+
+  @include phones {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.product-card__gallery-item {
+  @include phones {
+    display: none;
+    width: 100%;
+  }
+}
+
+.product-card__gallery-item_big {
+  grid-column: 2/3;
+  grid-row: 1/3;
+
+  @include tablets {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+
+  @include phones {
+    display: block;
+  }
+}
+
+.product-card__gallery-item_big img {
+  @include tablets {
+    width: 319px;
+    height: 286px;
+  }
+
+  @include phones {
+    display: block;
+    width: 290px;
+    height: 260px;
+  }
+}
+
+.product-card__info {
+  width: 370px;
+
+  @include desktop-min {
+    width: 40%;
+  }
+
+  @include tablets {
+    width: 47%;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.product-card__info h2 {
+  margin-top: -9px;
+  margin-bottom: 10px;
+  font-family: $alternative-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  color: $black;
+
+  @include phones {
+    margin-top: 43px;
+  }
+}
+
+.product-card__currency {
+  margin-right: 4px;
+}
+
+.product-card__price {
+  margin-top: 5px;
+  margin-bottom: 39px;
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 130%;
+  color: $black;
+
+  @include phones {
+    margin-bottom: 29px;
+  }
+}
+
+.product-card__info-btn {
+  margin-bottom: 19px;
+}
+
+.product-card__btn {
+  padding: 0;
+  margin-right: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $grey-placeholder;
+
+  @include phones {
+    margin-right: 35px;
+  }
+}
+
+.product-card__btn_active {
+  color: $black;
+}
+
+.product-card__description-item {
+  display: flex;
+  justify-content: space-between;
+  font-family: $base-font;
+  padding: 11px 0;
+  border-bottom: 1px solid $grey;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130%;
+  color: $black;
+}
+
+.product-card__description-name {
+  font-weight: 500;
+}
+
+.product-card__btn-add {
+  width: 100%;
+  margin-top: 50px;
+
+  @include phones {
+    margin-top: 39px;
+  }
+}
+
+.product-card__warranty {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  margin-left: -12px;
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: $grey-placeholder;
+
+  @include desktop-min {
+    justify-content: center;
+  }
+
+  @include tablets {
+    font-size: 12px;
+    margin-left: -9px;
+    margin-top: 12px;
+  }
+}
+
+.product-card__warranty div {
+  margin-left: 12px;
+
+  @include tablets {
+    margin-left: 9px;
+  }
+
+  @include phones {
+    text-align: center;
+    width: 27%;
+    padding-right: 6px;
+  }
+}
+
+.product-card__warranty div:nth-of-type(1) {
+  @include phones {
+    padding-right: 24px;
+  }
+}
+
+.product-card__warranty div:nth-of-type(3) {
+  @include phones {
+    padding-left: 24px;
+  }
+}
+
+
+.product-card__warranty div:nth-of-type(2) {
+  padding: 0 13px;
+  border-left: 1px solid $grey;
+  border-right: 1px solid $grey;
+
+  @include phones {
+    width: 33%;
+    padding: 0 8px;
+  }
+}
+
+.product-card__gallery-pagination {
+  display: none;
+
+  @include phones {
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+    display: block;
+    font-family: $base-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: $black;
+  }
+}

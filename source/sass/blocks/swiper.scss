@@ -169,3 +169,26 @@
 .swiper-pagination-mobile__separator {
   margin: 0 5px;
 }
+
+// product card
+
+.swiper_product-card {
+  padding-bottom: 118px;
+
+  @include tablets {
+    padding-bottom: 67px;
+  }
+}
+
+.swiper_product-card .swiper-button-prev,
+.swiper_product-card .swiper-button-next {
+  top: 21%;
+
+  @include tablets {
+    top: 118px;
+  }
+}
+
+.swiper_product-card h2 {
+  margin-bottom: 21px;
+}
