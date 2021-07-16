@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="./fonts/CormorantGaramond-Bold.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="./fonts/CormorantGaramond-Italic.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="./fonts/CormorantGaramond-Medium.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="./fonts/CormorantGaramond-Regular.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="./fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="./fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/CormorantGaramond-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/CormorantGaramond-Italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/CormorantGaramond-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/CormorantGaramond-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <title>Jewellery</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <meta name="description" content="Jewellery">
+  <meta name="description" content="Jewellery" />
 </head>
 
 <body>
@@ -20,9 +20,9 @@
     <div class="header__mobile-menu header__mobile-menu_no-js">
       <div class="header__top container">
         <button class="header__burger-btn" type="button">
-          <svg class="header__icon-burger" width="30" height="18">
-            <use xlink:href="img/sprite_auto.svg#icon-burger"></use>
-          </svg>
+            <svg class="header__icon-burger" width="30" height="18">
+              <use xlink:href="img/sprite_auto.svg#icon-burger"></use>
+            </svg>
         </button>
         <div class="header__search-field">
           <label for="search">
@@ -32,9 +32,11 @@
           </label>
           <input type="text" id="search" placeholder="Type here to search">
         </div>
-        <svg class="header__svg-logo" width="66" height="66">
-          <use xlink:href="img/sprite_auto.svg#logo"></use>
-        </svg>
+        <a href="index.html">
+          <svg class="header__svg-logo" width="66" height="66">
+            <use xlink:href="img/sprite_auto.svg#logo"></use>
+          </svg>
+        </a>
         <div class="header__top-right">
           <a class="header__link header__link_login" href="#">Login</a>
           <a class="header__link" href="#">
@@ -57,22 +59,27 @@
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="#">
-                Index
+                What’s new
               </a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="main.html">
-                Main
+              <a class="main-nav__link" href="#">
+                Chokers
               </a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">
-                Catalog
+              <a class="main-nav__link" href="#">
+                Necklaces
               </a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="product-card.html">
-                Product card
+              <a class="main-nav__link" href="#">
+                Rings
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">
+                Earrings
               </a>
             </li>
           </ul>
@@ -102,6 +109,54 @@
       </div>
     </div>
   </header>
+
+  <main>
+    <div class="popup-to-cart popup-to-cart_no-js">
+      <div class="popup-to-cart__modal">
+        <button type="button" class="popup-to-cart__close-btn">
+          <svg class="popup-to-cart__icon-close" width="14" height="14">
+            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2>The item was added to your cart</h2>
+        <div class="popup-to-cart__product">
+          <picture>
+            <!-- 1х: 84px; 2x: 168px -->
+            <!-- <source type="image/webp" srcset="img/origami-crane-necklace-desktop@1x.webp 1x, img/origami-crane-necklace-desktop@2x.webp 2x"> -->
+            <img src="img/necklace-detail-popup@1x.png" srcset="img/origami-crane-necklace-desktop@2x.jpg 2x" alt="necklace-detail" width="84" height="79">
+          </picture>
+          <div class="popup-to-cart__product-info">
+            <h3>Gold Necklace</h3>
+            <p>$ 115</p>
+          </div>
+          <div class="popup-to-cart__count-controls">
+            <button type="button">
+              <svg class="footer__icon-twitter" width="14" height="14">
+                <use xlink:href="img/sprite_auto.svg#icon-plus"></use>
+              </svg>
+            </button>
+            <p>1</p>
+            <button type="button">
+              <svg class="footer__icon-twitter" width="14" height="2">
+                <use xlink:href="img/sprite_auto.svg#icon-minus"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="popup-to-cart__results">
+          <div class="popup-to-cart__results-wrapper">
+            <p>You have <span class="popup-to-cart__conunt-products">1</span> item in the cart</p>
+            <p class="popup-to-cart__result-bold">Cart subtotal: $ <span class="popup-to-cart__price">115</span></p>
+          </div>
+        </div>
+        <div class="popup-to-cart__modal-buttons">
+          <a href="catalog.html" class="button">Continue shopping</a>
+          <a class="button">Checkout</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
 
   <footer class="footer">
     <div class="footer__wrapper container">
@@ -220,11 +275,11 @@
       <form action="https://echo.htmlacademy.ru">
         <div class="popup-log-in__form-field popup-log-in__form-field_email">
           <label for="email">email</label>
-          <input type="email" id="email" placeholder="Your E-mail" name="email" required="">
+          <input type="email" id="email" placeholder="Your E-mail" name="email" required>
         </div>
         <div class="popup-log-in__form-field popup-log-in__form-field_password">
           <label for="password">Password</label>
-          <input type="password" id="password" name="password" placeholder="Password" required="">
+          <input type="password" id="password" name="password" placeholder="Password" required>
           <a href="#">Forgot your password?</a>
         </div>
         <button class="popup-log-in__log-in-btn button" type="submit">Log In</button>

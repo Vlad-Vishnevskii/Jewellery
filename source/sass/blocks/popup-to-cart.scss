@@ -1,0 +1,222 @@
+.popup-to-cart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: $modal-background;
+  color: $black;
+
+  @include phones {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.popup-to-cart_no-js {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 10;
+  color: $black;
+
+  @include phones {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.popup-to-cart__modal {
+  position: relative;
+  width: 500px;
+  min-height: 439px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: $white;
+
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 519px;
+  }
+}
+
+.popup-to-cart_open {
+  display: flex;
+}
+
+.popup-to-cart__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-to-cart__icon-close {
+  fill: $black;
+}
+
+.popup-to-cart h2 {
+  font-family: $alternative-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 130%;
+  color: $black;
+  text-align: center;
+
+  @include phones {
+    width: 187px;
+    font-size: 24px;
+    line-height: 120%;
+  }
+}
+
+.popup-to-cart__product {
+  display: flex;
+  padding-left: 35px;
+  padding-right: 35px;
+
+  @include phones {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.popup-to-cart__product img {
+  width: 70px;
+  height: 63px;
+}
+
+.popup-to-cart__product-info {
+  margin-left: 20px;
+  margin-right: 200px;
+
+  @include phones {
+    margin-right: 86px;
+  }
+}
+
+.popup-to-cart__product-info h3 {
+  width: 105px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-family: $alternative-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 130%;
+  color: $black;
+}
+
+.popup-to-cart__product-info p {
+  margin-top: 0;
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130%;
+  color: $black;
+}
+
+.popup-to-cart__count-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.popup-to-cart__count-controls button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.popup-to-cart__count-controls p {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130%;
+  color: $black;
+}
+
+.popup-to-cart__results {
+  border-top: 1px solid $grey;
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.popup-to-cart__results-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 35px;
+  padding-right: 35px;
+
+  @include phones {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.popup-to-cart__results p {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130%;
+  color: $black;
+}
+
+.popup-to-cart__results p:last-of-type {
+  font-weight: 500;
+}
+
+.popup-to-cart__modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-top: 40px;
+
+  @include phones {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.popup-to-cart__modal-buttons a:first-of-type {
+  color: $black;
+  background-color: $white;
+  border: 1px solid $brown;
+
+  @include phones {
+    margin-bottom: 20px;
+  }
+}
+
+.popup-to-cart__modal-buttons a {
+  width: 47%;
+  text-decoration: none;
+
+  @include phones {
+    width: 100%;
+  }
+}

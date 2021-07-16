@@ -9,6 +9,10 @@
   }
 }
 
+.swiper_no-js {
+  display: none;
+}
+
 .swiper h2 {
   margin-top: 20px;
   margin-bottom: 24px;
@@ -50,6 +54,11 @@
   line-height: 130%;
   color: $black;
   border-bottom: 1px solid $brown;
+}
+
+.swiper-container_no-js img {
+  width: 70%;
+  height: auto;
 }
 
 .swiper-slide p {
@@ -173,6 +182,7 @@
 // product card
 
 .swiper_product-card {
+  padding: 40px;
   padding-bottom: 118px;
 
   @include tablets {

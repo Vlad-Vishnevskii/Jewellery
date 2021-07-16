@@ -20,6 +20,12 @@
 
   // Initialize Swiper
 
+  var swiperBlock = document.querySelector('.swiper')
+
+  if (swiperBlock) {
+    swiperBlock.classList.remove('swiper_no-js')
+  }
+
   const swiper = new Swiper('.swiper-container', {
     // Optional parameters
     loop: true,
@@ -170,6 +176,114 @@
       }
     }
     filterOpenBtn.addEventListener('click', onOpenBtnFilterClick)
+  }
+
+  // open add to cart modal
+
+  var btnAdd = document.querySelector('.product-card__btn-add');
+  var popupToCart = document.querySelector('.popup-to-cart');
+  var toCartCloseBtn = document.querySelector('.popup-to-cart__close-btn');
+  var escape = 27;
+
+  if (popupToCart) {
+
+    function openPopupToCart () {
+      popupToCart.classList.add('popup-to-cart_open');
+      body.classList.add('disable-scrolling-js');
+      toCartCloseBtn.addEventListener('click', onCloseButtonClick);
+      document.addEventListener('keydown', onEscapePress);
+      popupToCart.addEventListener('click', onOverlayClick);
+    }
+
+    function closePopupToCart () {
+      popupToCart.classList.remove('popup-to-cart_open');
+      body.classList.remove('disable-scrolling-js');
+      toCartCloseBtn.removeEventListener('click', onCloseButtonClick);
+      document.removeEventListener('keydown', onEscapePress);
+      popupToCart.removeEventListener('click', onOverlayClick);
+    }
+
+    function onOpenBtnClick (evt) {
+      evt.preventDefault();
+      openPopupToCart();
+    }
+
+    function onEscapePress(evt) {
+      if (evt.keyCode === escape) {
+        closePopupToCart();
+      }
+    }
+
+    function onCloseButtonClick() {
+      closePopupToCart();
+    }
+
+    function onOverlayClick(evt) {
+      var target = evt.target;
+      if (target.classList.contains('popup-to-cart')) {
+        closePopupToCart();
+      }
+    }
+    btnAdd.addEventListener('click', onOpenBtnClick)
+  }
+
+  // open log in modal
+
+  var btnLogIn = document.querySelector('.header__link_login');
+  var popupLogIn = document.querySelector('.popup-log-in');
+  var logInCloseBtn = document.querySelector('.popup-log-in__close-btn');
+  var formFieldEmailWrapper = document.querySelector('.popup-log-in__form-field_email');
+  var inputEmail = formFieldEmailWrapper.querySelector('input');
+
+  if (popupLogIn) {
+
+    function openPopupLogIn () {
+      popupLogIn.classList.add('popup-log-in_open');
+      body.classList.add('disable-scrolling-js');
+      logInCloseBtn.addEventListener('click', onCloseButtonClick);
+      document.addEventListener('keydown', onEscapePress);
+      popupLogIn.addEventListener('click', onOverlayClick);
+      inputEmail.focus();
+    }
+
+    function closePopupLogIn () {
+      popupLogIn.classList.remove('popup-log-in_open');
+      body.classList.remove('disable-scrolling-js');
+      logInCloseBtn.removeEventListener('click', onCloseButtonClick);
+      document.removeEventListener('keydown', onEscapePress);
+      popupLogIn.removeEventListener('click', onOverlayClick);
+    }
+
+    function onOpenBtnClick (evt) {
+      evt.preventDefault();
+      openPopupLogIn();
+    }
+
+    function onEscapePress(evt) {
+      if (evt.keyCode === escape) {
+        closePopupLogIn();
+      }
+    }
+
+    function onCloseButtonClick() {
+      closePopupLogIn();
+    }
+
+    function onOverlayClick(evt) {
+      var target = evt.target;
+      if (target.classList.contains('popup-log-in')) {
+        closePopupLogIn();
+      }
+    }
+    btnLogIn.addEventListener('click', onOpenBtnClick)
+
+    window.addEventListener('DOMContentLoaded', function () {
+      if (inputEmail) {
+        inputEmail.addEventListener('change', function () {
+          localStorage.setItem(inputEmail.value, 'inputEmail');
+        });
+      }
+    });
   }
 
 })();

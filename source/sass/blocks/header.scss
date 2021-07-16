@@ -213,55 +213,72 @@
 // mobile menu style
 
 .header__mobile-menu_no-js {
-  height: 77vh;
-  background-color: $brown;
-  padding-bottom: 80px;
+  @include tablets {
+    height: 77vh;
+    background-color: $brown;
+    padding-bottom: 80px;
+  }
+
 }
 
 .header__mobile-menu_open {
-  height: 100vh;
-  background-color: $brown;
-  overflow-y: scroll;
-  padding-bottom: 80px;
+  @include tablets {
+    height: 100vh;
+    background-color: $brown;
+    overflow-y: scroll;
+    padding-bottom: 80px;
+  }
 }
 
 .header__mobile-menu_open .header__svg-logo,
 .header__mobile-menu_open .header__icon-search,
 .header__mobile-menu_no-js .header__svg-logo,
 .header__mobile-menu_no-js .header__icon-search {
-  fill: $white;
+  @include tablets {
+    fill: $white;
+  }
 }
 
 .header__mobile-menu_open .header__icon-search,
 .header__mobile-menu_no-js .header__icon-search {
-  width: 17px;
-  height: 17px;
-  margin-top: 7px;
+  @include tablets {
+    width: 17px;
+    height: 17px;
+    margin-top: 7px;
+  }
+
 }
 
 .header__mobile-menu_open .header__icon-burger,
 .header__mobile-menu_open .header__icon-cart,
 .header__mobile-menu_no-js .header__icon-burger,
 .header__mobile-menu_no-js .header__icon-cart {
-  stroke: $white;
+  @include tablets {
+    stroke: $white;
+  }
+
 }
 
 .header__mobile-menu_open .header__top,
 .header__mobile-menu_no-js .header__top {
-  flex-wrap: wrap;
+  @include tablets {
+    flex-wrap: wrap;
+  }
 }
 
 .header__mobile-menu_open .header__search-field,
 .header__mobile-menu_no-js .header__search-field {
-  display: flex;
-  align-items: center;
-  order: 5;
-  width: 100%;
-  height: 39px;
-  padding-left: 10px;
-  margin-top: 40px;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 21px;
+  @include tablets {
+    display: flex;
+    align-items: center;
+    order: 5;
+    width: 100%;
+    height: 39px;
+    padding-left: 10px;
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 21px;
+  }
 
   @include phones {
     margin-top: 30px;
@@ -270,46 +287,63 @@
 
 .header__mobile-menu_open input::placeholder,
 .header__mobile-menu_no-js input::placeholder  {
-  color: transparent;
+  @include tablets {
+    color: transparent;
+  }
 }
 
 .header__mobile-menu_open input::-webkit-input-placeholder,
 .header__mobile-menu_no-js input::-webkit-input-placeholder {
-  color: transparent;
+  @include tablets {
+    color: transparent;
+  }
 }
 
 .header__mobile-menu_open input::-moz-placeholder,
 .header__mobile-menu_no-js input::-moz-placeholder {
-  color: transparent;
+  @include tablets {
+    color: transparent;
+  }
 }
 
 .header__mobile-menu_open .header__menu,
 .header__mobile-menu_no-js .header__menu {
-  display: block;
+  @include tablets {
+    display: block;
+  }
 }
 
 .header__mobile-menu_open .main-nav__list,
 .header__mobile-menu_no-js .main-nav__list {
-  flex-direction: column;
-  margin-left: -26px;
+  @include tablets {
+    flex-direction: column;
+    margin-left: -26px;
+  }
+
 }
 
 .header__mobile-menu_open .main-nav__item,
 .header__mobile-menu_no-js .main-nav__item {
-  margin-bottom: 21px;
+  @include tablets {
+    margin-bottom: 21px;
+  }
 }
 
 .header__mobile-menu_open .main-nav__link,
 .header__mobile-menu_no-js .main-nav__link {
-  color: $white;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
+  @include tablets {
+    color: $white;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .header__mobile-menu_open .main-nav__item:nth-of-type(3),
 .header__mobile-menu_no-js .main-nav__item:nth-of-type(3) {
-  margin-left: 33px;
+  @include tablets {
+    margin-left: 33px;
+  }
 
   @include phones {
     margin-left: 0;
@@ -318,19 +352,27 @@
 
 .header__mobile-menu_open .header__bottom,
 .header__mobile-menu_no-js .header__bottom {
-  align-items: flex-start;
-  border: none;
+  @include tablets {
+    align-items: flex-start;
+    border: none;
+  }
+
 }
 
 .header__mobile-menu_open .header__mobile-links,
 .header__mobile-menu_no-js .header__mobile-links {
-  display: block;
-  padding: 0;
+  @include tablets {
+    display: block;
+    padding: 0;
+  }
+
 }
 
 .header__mobile-links ul {
-  padding: 0;
-  padding-left: 44px;
+  @include tablets {
+    padding: 0;
+    padding-left: 44px;
+  }
 
   @include phones {
     padding-left: 15px;
@@ -339,5 +381,7 @@
 }
 
 .header__mobile-links li {
-  margin-bottom: 22px;
+  @include tablets {
+    margin-bottom: 22px;
+  }
 }

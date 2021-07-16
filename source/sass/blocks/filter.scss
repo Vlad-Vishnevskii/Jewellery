@@ -84,7 +84,7 @@
 
 .filter__field label {
   position: relative;
-  font-family: Poppins;
+  font-family: $base-font;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -252,4 +252,8 @@
     border: none;
     background-color: $black;
   }
+}
+
+.filter__close-btn-mobile svg {
+  fill: $white;
 }

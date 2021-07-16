@@ -1,0 +1,185 @@
+.popup-log-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: $modal-background;
+  color: $black;
+
+  @include phones {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.popup-log-in_no-js {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 10;
+  color: $black;
+
+  @include phones {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.popup-log-in__modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 430px;
+  min-height: 586px;
+  padding-bottom: 16px;
+  background-color: $beige;
+  box-shadow: 0px 5px 32px $box-shadow-log-in;
+
+  @include phones {
+    width: 100%;
+    min-height: 519px;
+  }
+}
+
+.popup-log-in_open {
+  display: flex;
+}
+
+.popup-log-in__background {
+  background-image: url("../img/sweet-ice-cream-photography@1x.jpg");
+  width: 430px;
+  height: 138px;
+
+  @include retina {
+    background-image: url("../img/sweet-ice-cream-photography@2x.jpg");
+  }
+}
+
+.popup-log-in__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-log-in__icon-close {
+  fill: $black;
+}
+
+.popup-log-in h2 {
+  font-family: $alternative-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  color: $black;
+}
+
+.popup-log-in form {
+  padding-left: 45px;
+  padding-right: 45px;
+  width: 100%;
+}
+
+.popup-log-in__form-field {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.popup-log-in__form-field_password {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-log-in__form-field_password a {
+  align-self: flex-end;
+  margin-top: 5px;
+  text-decoration: none;
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: $grey-placeholder;
+}
+
+.popup-log-in__form-field:last-of-type {
+  margin-bottom: 0;
+}
+
+.popup-log-in__form-field label {
+  display: none;
+}
+
+.popup-log-in__form-field input {
+  width: 100%;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $black;
+  font-family: $base-font;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $black;
+}
+
+.popup-log-in__form-field input::placeholder {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $grey-placeholder;
+  appearance: none;
+}
+
+.popup-log-in__form-field input::-webkit-input-placeholder {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $grey-placeholder;
+  appearance: none;
+}
+
+.popup-log-in__form-field input::-moz-placeholder {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $grey-placeholder;
+  appearance: none;
+}
+
+.popup-log-in__log-in-btn {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.popup-log-in p {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $grey-placeholder;
+  text-align: center;
+}
+
+.popup-log-in__sign-up {
+  color: $black;
+  text-decoration: none;
+}
