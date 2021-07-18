@@ -15,7 +15,7 @@ var svgstore = require("gulp-svgstore")
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
-var js_min = require('gulp-jsmin');
+var js_min = require("gulp-jsmin");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")

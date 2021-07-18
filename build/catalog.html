@@ -118,8 +118,8 @@
       </p>
     </section>
 
-    <section class="catalog container catalog__no-js">
-      <div class="catalog__filter filter catalog__filter-mobile_no-js">
+    <section class="catalog container catalog_no-js">
+      <div class="catalog__filter filter  catalog__filter-mobile catalog__filter-mobile_no-js">
         <form action="https://echo.htmlacademy.ru">
           <button type="button" class="catalog__filter-close-btn filter__close-btn-mobile">
             <svg width="14" height="14">
@@ -240,7 +240,7 @@
 
       </div>
       <div class="catalog__wrapper">
-        <button class="catalog__filter-btn-mobile button catalog__filter-mobile_no-js" type="button">Filter</button>
+        <button class="catalog__filter-btn-mobile button catalog__filter-btn-mobile_no-js" type="button">Filter</button>
         <ul class="catalog__list">
           <li class="catalog__item">
             <a href="#">
@@ -349,7 +349,7 @@
               <picture>
                 <!-- 1х: 270px; 2x: 540px -->
                 <source type="image/webp" srcset="img/elephant-earrings-desktop@1x.webp 1x, img/elephant-earrings-desktop@2x.webp 2x">
-                <img src="img/elephant-earrings-desktop@1x.jpg" alt="Elephant earrings" width="270" height="272">
+                <img src="img/elephant-earrings-desktop@1x.jpg" srcset="img/elephant-earrings-desktop@2x.jpg 2x" alt="Elephant earrings" width="270" height="272">
               </picture>
               <h3>Elephant earrings</h3>
               <p>$95</p>
@@ -360,7 +360,7 @@
               <picture>
                 <!-- 1х: 270px; 2x: 540px -->
                 <source type="image/webp" srcset="img/threader-necklace-closeup-desktop@1x.webp 1x, img/threader-necklace-closeup-desktop@2x.webp 2x">
-                <img src="img/threader-necklace-closeup-desktop@1x.jpg" alt="Threader necklace" width="270" height="272">
+                <img src="img/threader-necklace-closeup-desktop@1x.jpg" srcset="img/threader-necklace-closeup-desktop@2x.jpg 2x" alt="Threader necklace" width="270" height="272">
               </picture>
               <h3>Threader necklace</h3>
               <p>$115</p>
@@ -372,7 +372,7 @@
               <picture>
                 <!-- 1х: 270px; 2x: 540px -->
                 <source type="image/webp" srcset="img/origami-crane-necklace-desktop@1x.webp 1x, img/origami-crane-necklace-desktop@2x.webp 2x">
-                <img src="img/origami-crane-necklace-desktop@1x.jpg" alt="Origami crane necklace" width="270" height="272">
+                <img src="img/origami-crane-necklace-desktop@1x.jpg" srcset="img/origami-crane-necklace-desktop@2x.jpg 2x" alt="Origami crane necklace" width="270" height="272">
               </picture>
               <h3>Origami crane necklace</h3>
               <p>$ 115</p>
@@ -525,8 +525,8 @@
       <h2>Log In</h2>
       <form action="https://echo.htmlacademy.ru">
         <div class="popup-log-in__form-field popup-log-in__form-field_email">
-          <label for="email">email</label>
-          <input type="email" id="email" placeholder="Your E-mail" name="email" required="">
+          <label for="mail">email</label>
+          <input type="email" id="mail" placeholder="Your E-mail" name="email" required="">
         </div>
         <div class="popup-log-in__form-field popup-log-in__form-field_password">
           <label for="password">Password</label>
