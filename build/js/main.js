@@ -10,9 +10,13 @@
     mobileMenu.classList.remove('header__mobile-menu_no-js');
   }
 
-  function onBurgerClick () {
+  function openMobileMenu () {
     mobileMenu.classList.toggle('header__mobile-menu_open');
     body.classList.toggle('disable-scrolling-js');
+  }
+
+  function onBurgerClick () {
+    openMobileMenu();
   }
 
   burgerBtn.addEventListener('click', onBurgerClick);
@@ -29,9 +33,6 @@
   const swiper = new Swiper('.swiper-container', {
     // Optional parameters
     loop: true,
-    // spaceBetween: 30,
-    // slidesPerView: 4,
-    // slidesPerGroup: 4,
 
     breakpoints: {
       // when window width is >= 320px
@@ -234,6 +235,7 @@
   var logInCloseBtn = document.querySelector('.popup-log-in__close-btn');
   var formFieldEmailWrapper = document.querySelector('.popup-log-in__form-field_email');
   var inputEmail = formFieldEmailWrapper.querySelector('input');
+  var btnLogInMobile = document.querySelector('.header__mobile-link-login');
 
   if (popupLogIn) {
 
@@ -248,7 +250,9 @@
 
     function closePopupLogIn () {
       popupLogIn.classList.remove('popup-log-in_open');
-      body.classList.remove('disable-scrolling-js');
+      if (!mobileMenu.classList.contains('header__mobile-menu_open')) {
+        body.classList.remove('disable-scrolling-js');
+      }
       logInCloseBtn.removeEventListener('click', onCloseButtonClick);
       document.removeEventListener('keydown', onEscapePress);
       popupLogIn.removeEventListener('click', onOverlayClick);
@@ -275,7 +279,8 @@
         closePopupLogIn();
       }
     }
-    btnLogIn.addEventListener('click', onOpenBtnClick)
+    btnLogIn.addEventListener('click', onOpenBtnClick);
+    btnLogInMobile.addEventListener('click', onOpenBtnClick);
 
     window.addEventListener('DOMContentLoaded', function () {
       if (inputEmail) {

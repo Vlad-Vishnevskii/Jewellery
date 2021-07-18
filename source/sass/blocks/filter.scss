@@ -8,6 +8,16 @@
   @include tablets {
     border-left: none;
     border-right: none;
+    padding-top: 34px;
+    padding-bottom: 34px;
+    padding-left: 21px;
+    padding-right: 40px;
+  }
+
+  @include phones {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-right: 20px;
   }
 }
 
@@ -16,11 +26,24 @@
 
   @include tablets {
     border-top: none;
+    padding-bottom: 40px;
+  }
+
+  @include phones {
+    padding-bottom: 30px;
   }
 }
 
 .filter__type:nth-of-type(4) {
   padding-bottom: 3px;
+
+  @include tablets {
+    padding-bottom: 34px;
+  }
+
+  @include phones {
+    padding-bottom: 24px;
+  }
 }
 
 .filter__type h3 {
@@ -30,7 +53,13 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
+
+  @include tablets {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
   }
+}
 
 .filter form {
   position: relative;
@@ -45,6 +74,16 @@
 
 .filter__field {
   margin-bottom: 12px;
+
+  @include tablets {
+    margin-top: 14px;
+    margin-bottom: 18px;
+    padding-left: 10px;
+  }
+}
+
+.filter__field:last-of-type {
+  margin-bottom: 0;
 }
 
 .filter__type:last-of-type {
@@ -59,6 +98,11 @@
 
 .filter__icon {
   fill: $white;
+
+  @include tablets {
+    width: 23px;
+    height: 12px;
+  }
 }
 
 .filter__trigger {
@@ -72,6 +116,10 @@
   background: none;
   cursor: pointer;
   padding: 0;
+
+  @include tablets {
+    margin-top: -3px;
+  }
 }
 
 .filter__type_active .filter__content {
@@ -90,6 +138,10 @@
   font-size: 14px;
   line-height: 130%;
   color: $black;
+
+  @include tablets {
+    font-size: 16px;
+  }
 }
 
 .filter__field input {
@@ -111,6 +163,12 @@
   background-position: center center;
   background-size: 50% 50%;
   cursor: pointer;
+
+  @include tablets {
+    left: -31px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .filter__field input:checked + label::before {
@@ -120,6 +178,10 @@
 .filter__range {
   margin-left: -10px;
   margin-top: -3px;
+
+  @include tablets {
+    margin-top: 20px;
+  }
 }
 
 .filter__range-controls {
@@ -147,8 +209,8 @@
   }
 
   @include phones {
-    left: 38px;
-    width: 55%;
+    left: 18px;
+    width: 63%;
   }
 }
 
@@ -160,26 +222,35 @@
   border-radius: 50%;
   background-color: $brown;
   cursor: pointer;
+
+  @include tablets {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .filter__toggle_min {
   left: 12%;
+
+  @include tablets {
+    left: 10%;
+  }
+
+  @include phones {
+    left: 3%;
+  }
 }
 
 .filter__toggle_max {
   left: 71%;
 
   @include tablets {
-    left: 214px;
+    left: 62%;
   }
 
   @include phones {
     left: 143px;
   }
-}
-
-.filter__price-value {
-  margin-top: 25px;
 }
 
 .filter__price-value {
@@ -197,13 +268,15 @@
   color: $black;
 
   @include tablets {
+    margin-top: 20px;
     padding-left: 33px;
     padding-right: 105px;
   }
 
   @include phones {
-    padding-left: 15px;
-    padding-right: 40px;
+    padding-left: 4px;
+    padding-right: 44px;
+    padding-bottom: 0;
   }
 }
 
@@ -212,12 +285,13 @@
 
   @include tablets {
     width: 362px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 21px;
+    margin-top: 40px;
   }
 
   @include phones {
     width: 230px;
+    margin-top: 30px;
   }
 }
 
@@ -229,12 +303,12 @@
 
   @include tablets {
     width: 362px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 21px;
   }
 
   @include phones {
     width: 230px;
+    margin-top: 16px;
   }
 }
 

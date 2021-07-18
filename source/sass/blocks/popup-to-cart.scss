@@ -56,10 +56,15 @@
 .popup-to-cart__close-btn {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 14px;
   background: none;
   border: none;
   cursor: pointer;
+
+  @include phones {
+    top: 14px;
+    right: 9px;
+  }
 }
 
 .popup-to-cart__icon-close {
@@ -67,6 +72,8 @@
 }
 
 .popup-to-cart h2 {
+  margin-top: 32px;
+  margin-bottom: 47px;
   font-family: $alternative-font;
   font-style: normal;
   font-weight: bold;
@@ -77,6 +84,8 @@
 
   @include phones {
     width: 187px;
+    margin-top: 24px;
+    margin-bottom: 33px;
     font-size: 24px;
     line-height: 120%;
   }
@@ -85,7 +94,12 @@
 .popup-to-cart__product {
   display: flex;
   padding-left: 35px;
-  padding-right: 35px;
+  padding-right: 32px;
+
+  @include tablets {
+    padding-left: 30px;
+    padding-right: 25px;
+  }
 
   @include phones {
     padding-left: 15px;
@@ -94,29 +108,46 @@
 }
 
 .popup-to-cart__product img {
-  width: 70px;
-  height: 63px;
+  width: 84px;
+  height: 79px;
+
+  @include phones {
+    width: 70px;
+    height: 63px;
+  }
 }
 
 .popup-to-cart__product-info {
   margin-left: 20px;
-  margin-right: 200px;
+  margin-right: 209px;
+  padding-bottom: 51px;
+
+  @include tablets {
+    margin-left: 22px;
+    margin-right: 216px;
+  }
 
   @include phones {
-    margin-right: 86px;
+    padding-bottom: 32px;
+    margin-left: 16px;
+    margin-right: 54px;
   }
 }
 
 .popup-to-cart__product-info h3 {
   width: 105px;
-  margin-top: 0;
-  margin-bottom: 5px;
+  margin-top: -5px;
+  margin-bottom: 9px;
   font-family: $alternative-font;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 130%;
   color: $black;
+
+  @include phones {
+    font-size: 16px;
+  }
 }
 
 .popup-to-cart__product-info p {
@@ -127,13 +158,21 @@
   font-size: 18px;
   line-height: 130%;
   color: $black;
+
+  @include phones {
+    font-size: 16px;
+  }
 }
 
 .popup-to-cart__count-controls {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 30px;
+  margin-top: -3px;
+
+  @include phones {
+    margin-top: 0;
+  }
 }
 
 .popup-to-cart__count-controls button {
@@ -144,12 +183,21 @@
 }
 
 .popup-to-cart__count-controls p {
+  margin: 8px 0;
   font-family: $base-font;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 130%;
   color: $black;
+
+  @include tablets {
+    margin: 9px 0;
+  }
+
+  @include phones {
+    margin: 6px 0;
+  }
 }
 
 .popup-to-cart__results {
@@ -166,6 +214,11 @@
   padding-left: 35px;
   padding-right: 35px;
 
+  @include tablets {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   @include phones {
     flex-direction: column;
     align-items: flex-start;
@@ -181,10 +234,19 @@
   font-size: 14px;
   line-height: 130%;
   color: $black;
+
+  @include phones {
+    font-size: 12px;
+    margin-top: 20px;
+  }
 }
 
 .popup-to-cart__results p:last-of-type {
   font-weight: 500;
+
+  @include phones {
+    margin-top: 2px;
+  }
 }
 
 .popup-to-cart__modal-buttons {
@@ -192,11 +254,17 @@
   justify-content: space-between;
   padding-left: 35px;
   padding-right: 35px;
-  margin-top: 40px;
+  margin-top: 22px;
+
+  @include tablets {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
   @include phones {
     flex-direction: column;
     width: 100%;
+    margin-top: 19px;
     padding-left: 15px;
     padding-right: 15px;
   }
