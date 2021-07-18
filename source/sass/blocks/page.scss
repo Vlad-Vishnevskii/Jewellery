@@ -14,3 +14,13 @@
 .page main {
   overflow: hidden;
 }
+
+.page a {
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    opacity: 0.7;
+  }
+}
