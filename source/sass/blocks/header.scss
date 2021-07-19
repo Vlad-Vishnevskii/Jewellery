@@ -11,12 +11,12 @@
   color: $black;
 
   @include tablets {
-    padding-bottom: 28px;
+    padding-bottom: 23px;
     align-items: flex-start;
   }
 
   @include phones {
-    padding-bottom: 19px;
+    padding-bottom: 14px;
   }
 }
 
@@ -25,6 +25,15 @@
   align-items: flex-start;
   width: 176px;
   margin-top: 22px;
+  cursor: pointer;
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
 
   @include tablets {
     display: none;
@@ -186,6 +195,16 @@
 
 .header__mobile-links ul {
   list-style: none;
+
+  @include tablets {
+    padding: 0;
+    padding-left: 44px;
+  }
+
+  @include phones {
+    padding-left: 15px;
+    margin-top: 5px;
+  }
 }
 
 .header__mobile-links a {
@@ -218,7 +237,6 @@
     background-color: $brown;
     padding-bottom: 80px;
   }
-
 }
 
 .header__mobile-menu_open {
@@ -246,7 +264,6 @@
     height: 17px;
     margin-top: 7px;
   }
-
 }
 
 .header__mobile-menu_open .header__icon-burger,
@@ -256,7 +273,6 @@
   @include tablets {
     stroke: $white;
   }
-
 }
 
 .header__mobile-menu_open .header__top,
@@ -275,18 +291,19 @@
     width: 100%;
     height: 39px;
     padding-left: 10px;
-    margin-top: 40px;
+    margin-top: 35px;
+    margin-bottom: 12px;
     background: rgba(255, 255, 255, 0.15);
     border-radius: 21px;
   }
 
   @include phones {
-    margin-top: 30px;
+    margin-top: 24px;
   }
 }
 
 .header__mobile-menu_open input::placeholder,
-.header__mobile-menu_no-js input::placeholder  {
+.header__mobile-menu_no-js input::placeholder {
   @include tablets {
     color: transparent;
   }
@@ -319,7 +336,6 @@
     flex-direction: column;
     margin-left: -26px;
   }
-
 }
 
 .header__mobile-menu_open .main-nav__item,
@@ -356,7 +372,6 @@
     align-items: flex-start;
     border: none;
   }
-
 }
 
 .header__mobile-menu_open .header__mobile-links,
@@ -364,19 +379,6 @@
   @include tablets {
     display: block;
     padding: 0;
-  }
-
-}
-
-.header__mobile-links ul {
-  @include tablets {
-    padding: 0;
-    padding-left: 44px;
-  }
-
-  @include phones {
-    padding-left: 15px;
-    margin-top: 5px;
   }
 }
 

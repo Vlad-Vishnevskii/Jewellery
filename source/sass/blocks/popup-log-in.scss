@@ -41,7 +41,7 @@
   min-height: 586px;
   padding-bottom: 16px;
   background-color: $beige;
-  box-shadow: 0px 5px 32px $box-shadow-log-in;
+  box-shadow: 0 5px 32px $box-shadow-log-in;
 
   @include tablets {
     width: 442px;

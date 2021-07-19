@@ -103,6 +103,14 @@
   border: none;
   color: $white;
   width: 100%;
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .footer__icon-right-arrow {
@@ -120,6 +128,15 @@
   font-size: 16px;
   line-height: 130%;
   color: $white;
+  cursor: pointer;
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
 
   @include phones {
     width: 108px;
@@ -140,7 +157,6 @@
   @include tablets {
     width: 84%;
     margin-top: 22px;
-
   }
 
   @include phones {

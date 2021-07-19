@@ -1,11 +1,12 @@
 .product-card {
   border-top: 1px solid $grey;
   padding-top: 80px;
-  padding-bottom: 40px;
+  padding-bottom: 61px;
 
   @include tablets {
     border-top: none;
     padding-top: 33px;
+    padding-bottom: 9px;
   }
 
   @include phones {
@@ -267,9 +268,7 @@
     position: absolute;
     bottom: -3px;
     left: 50%;
-    -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     display: block;
     font-family: $base-font;
     font-style: normal;

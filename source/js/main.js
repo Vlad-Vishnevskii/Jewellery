@@ -10,12 +10,12 @@
     mobileMenu.classList.remove('header__mobile-menu_no-js');
   }
 
-  function openMobileMenu () {
+  function openMobileMenu() {
     mobileMenu.classList.toggle('header__mobile-menu_open');
     body.classList.toggle('disable-scrolling-js');
   }
 
-  function onBurgerClick () {
+  function onBurgerClick() {
     openMobileMenu();
   }
 
@@ -24,10 +24,10 @@
 
   // Initialize Swiper
 
-  var swiperBlock = document.querySelector('.swiper')
+  var swiperBlock = document.querySelector('.swiper');
 
   if (swiperBlock) {
-    swiperBlock.classList.remove('swiper_no-js')
+    swiperBlock.classList.remove('swiper_no-js');
   }
 
   const swiper = new Swiper('.swiper-container', {
@@ -74,12 +74,12 @@
   if (paginationMobileLength && paginationMobileStartIndex) {
     paginationMobileLength.textContent = (swiper.slides.length - 4) / 2;
 
-    swiper.on('transitionEnd', function() {
+    swiper.on('transitionEnd', function () {
       paginationMobileStartIndex.textContent = (swiper.realIndex / 2) + 1;
     });
   }
 
-  //accordion
+  // accordion
 
   var accordionsNoJS = document.querySelectorAll('.accordion_no-js');
   var accordionContentNoJS = document.querySelectorAll('.accordion__content_no-js');
@@ -101,16 +101,16 @@
       questionsItemNoJS[k].classList.remove('questions__item_no-js');
     }
 
-    for (var i = 0; i < filterMobileNoJs.length; i++) {
-      filterMobileNoJs[i].classList.remove('catalog__filter-mobile_no-js');
+    for (var q = 0; q < filterMobileNoJs.length; q++) {
+      filterMobileNoJs[q].classList.remove('catalog__filter-mobile_no-js');
     }
 
-    for (var i = 0; i < catalogNoJs.length; i++) {
-      catalogNoJs[i].classList.remove('catalog_no-js');
+    for (var x = 0; x < catalogNoJs.length; x++) {
+      catalogNoJs[x].classList.remove('catalog_no-js');
     }
 
-    for (var i = 0; i < filterBtnMobileNoJs.length; i++) {
-      filterBtnMobileNoJs[i].classList.remove('catalog__filter-mobile_no-js');
+    for (var y = 0; y < filterBtnMobileNoJs.length; y++) {
+      filterBtnMobileNoJs[y].classList.remove('catalog__filter-mobile_no-js');
     }
   }
 
@@ -132,17 +132,16 @@
 
   // accordion filter
 
-  if (filter) {
-    function filterAccordion (evt) {
-      var target = evt.target;
-      console.log(target)
-      if (target.closest('.filter__trigger')) {
-        var filterName = target.closest('.filter__type');
-        filterName.classList.toggle('filter__type_active');
-      }
+  function filterAccordion(evt) {
+    var target = evt.target;
+    if (target.closest('.filter__trigger')) {
+      var filterName = target.closest('.filter__type');
+      filterName.classList.toggle('filter__type_active');
     }
+  }
 
-    filter.addEventListener('click', filterAccordion)
+  if (filter) {
+    filter.addEventListener('click', filterAccordion);
   }
 
   // open filter modal
@@ -151,37 +150,37 @@
   var catalogFilter = document.querySelector('.catalog__filter');
   var closeBtn = document.querySelector('.filter__close-btn-mobile');
 
-  if (catalogFilter) {
+  function openFilterModal() {
+    catalogFilter.classList.add('catalog__filter-mobile_open');
+    body.classList.add('disable-scrolling-js');
+    closeBtn.addEventListener('click', onCloseButtonClick);
+    catalogFilter.addEventListener('click', onOverlayClick);
+  }
 
-    function openFilterModal () {
-      catalogFilter.classList.add('catalog__filter-mobile_open');
-      body.classList.add('disable-scrolling-js');
-      closeBtn.addEventListener('click', onCloseButtonClick);
-      catalogFilter.addEventListener('click', onOverlayClick);
-    }
+  function closeFilterModal() {
+    catalogFilter.classList.remove('catalog__filter-mobile_open');
+    body.classList.remove('disable-scrolling-js');
+    closeBtn.removeEventListener('click', onCloseButtonClick);
+    catalogFilter.removeEventListener('click', onOverlayClick);
+  }
 
-    function closeFilterModal () {
-      catalogFilter.classList.remove('catalog__filter-mobile_open');
-      body.classList.remove('disable-scrolling-js');
-      closeBtn.removeEventListener('click', onCloseButtonClick);
-      catalogFilter.removeEventListener('click', onOverlayClick);
-    }
+  function onOpenBtnFilterClick() {
+    openFilterModal();
+  }
 
-    function onOpenBtnFilterClick () {
-      openFilterModal();
-    }
+  function onCloseButtonClick() {
+    closeFilterModal();
+  }
 
-    function onCloseButtonClick() {
+  function onOverlayClick(evt) {
+    var target = evt.target;
+    if (target.classList.contains('catalog__filter')) {
       closeFilterModal();
     }
+  }
 
-    function onOverlayClick(evt) {
-      var target = evt.target;
-      if (target.classList.contains('catalog__filter')) {
-        closeFilterModal();
-      }
-    }
-    filterOpenBtn.addEventListener('click', onOpenBtnFilterClick)
+  if (catalogFilter) {
+    filterOpenBtn.addEventListener('click', onOpenBtnFilterClick);
   }
 
   // open add to cart modal
@@ -191,46 +190,46 @@
   var toCartCloseBtn = document.querySelector('.popup-to-cart__close-btn');
   var escape = 27;
 
-  if (popupToCart) {
+  function openPopupToCart() {
+    popupToCart.classList.add('popup-to-cart_open');
+    body.classList.add('disable-scrolling-js');
+    toCartCloseBtn.addEventListener('click', onCloseButtonToCartClick);
+    document.addEventListener('keydown', onEscapePress);
+    popupToCart.addEventListener('click', onOverlayToCartClick);
+  }
 
-    function openPopupToCart () {
-      popupToCart.classList.add('popup-to-cart_open');
-      body.classList.add('disable-scrolling-js');
-      toCartCloseBtn.addEventListener('click', onCloseButtonClick);
-      document.addEventListener('keydown', onEscapePress);
-      popupToCart.addEventListener('click', onOverlayClick);
-    }
+  function closePopupToCart() {
+    popupToCart.classList.remove('popup-to-cart_open');
+    body.classList.remove('disable-scrolling-js');
+    toCartCloseBtn.removeEventListener('click', onCloseButtonToCartClick);
+    document.removeEventListener('keydown', onEscapePress);
+    popupToCart.removeEventListener('click', onOverlayToCartClick);
+  }
 
-    function closePopupToCart () {
-      popupToCart.classList.remove('popup-to-cart_open');
-      body.classList.remove('disable-scrolling-js');
-      toCartCloseBtn.removeEventListener('click', onCloseButtonClick);
-      document.removeEventListener('keydown', onEscapePress);
-      popupToCart.removeEventListener('click', onOverlayClick);
-    }
+  function onOpenBtnClick(evt) {
+    evt.preventDefault();
+    openPopupToCart();
+  }
 
-    function onOpenBtnClick (evt) {
-      evt.preventDefault();
-      openPopupToCart();
-    }
-
-    function onEscapePress(evt) {
-      if (evt.keyCode === escape) {
-        closePopupToCart();
-      }
-    }
-
-    function onCloseButtonClick() {
+  function onEscapePress(evt) {
+    if (evt.keyCode === escape) {
       closePopupToCart();
     }
+  }
 
-    function onOverlayClick(evt) {
-      var target = evt.target;
-      if (target.classList.contains('popup-to-cart')) {
-        closePopupToCart();
-      }
+  function onCloseButtonToCartClick() {
+    closePopupToCart();
+  }
+
+  function onOverlayToCartClick(evt) {
+    var target = evt.target;
+    if (target.classList.contains('popup-to-cart')) {
+      closePopupToCart();
     }
-    btnAdd.addEventListener('click', onOpenBtnClick)
+  }
+
+  if (popupToCart) {
+    btnAdd.addEventListener('click', onOpenBtnClick);
   }
 
   // open log in modal
@@ -242,50 +241,50 @@
   var inputEmail = formFieldEmailWrapper.querySelector('input');
   var btnLogInMobile = document.querySelector('.header__mobile-link-login');
 
-  if (popupLogIn) {
+  function openPopupLogIn() {
+    popupLogIn.classList.add('popup-log-in_open');
+    body.classList.add('disable-scrolling-js');
+    logInCloseBtn.addEventListener('click', onCloseButtonClickLogIn);
+    document.addEventListener('keydown', onEscapePressLogIn);
+    popupLogIn.addEventListener('click', onOverlayClickLogIn);
+    inputEmail.focus();
+  }
 
-    function openPopupLogIn () {
-      popupLogIn.classList.add('popup-log-in_open');
-      body.classList.add('disable-scrolling-js');
-      logInCloseBtn.addEventListener('click', onCloseButtonClick);
-      document.addEventListener('keydown', onEscapePress);
-      popupLogIn.addEventListener('click', onOverlayClick);
-      inputEmail.focus();
+  function closePopupLogIn() {
+    popupLogIn.classList.remove('popup-log-in_open');
+    if (!mobileMenu.classList.contains('header__mobile-menu_open')) {
+      body.classList.remove('disable-scrolling-js');
     }
+    logInCloseBtn.removeEventListener('click', onCloseButtonClickLogIn);
+    document.removeEventListener('keydown', onEscapePressLogIn);
+    popupLogIn.removeEventListener('click', onOverlayClickLogIn);
+  }
 
-    function closePopupLogIn () {
-      popupLogIn.classList.remove('popup-log-in_open');
-      if (!mobileMenu.classList.contains('header__mobile-menu_open')) {
-        body.classList.remove('disable-scrolling-js');
-      }
-      logInCloseBtn.removeEventListener('click', onCloseButtonClick);
-      document.removeEventListener('keydown', onEscapePress);
-      popupLogIn.removeEventListener('click', onOverlayClick);
-    }
+  function onOpenLogInBtnClick(evt) {
+    evt.preventDefault();
+    openPopupLogIn();
+  }
 
-    function onOpenBtnClick (evt) {
-      evt.preventDefault();
-      openPopupLogIn();
-    }
-
-    function onEscapePress(evt) {
-      if (evt.keyCode === escape) {
-        closePopupLogIn();
-      }
-    }
-
-    function onCloseButtonClick() {
+  function onEscapePressLogIn(evt) {
+    if (evt.keyCode === escape) {
       closePopupLogIn();
     }
+  }
 
-    function onOverlayClick(evt) {
-      var target = evt.target;
-      if (target.classList.contains('popup-log-in')) {
-        closePopupLogIn();
-      }
+  function onCloseButtonClickLogIn() {
+    closePopupLogIn();
+  }
+
+  function onOverlayClickLogIn(evt) {
+    var target = evt.target;
+    if (target.classList.contains('popup-log-in')) {
+      closePopupLogIn();
     }
-    btnLogIn.addEventListener('click', onOpenBtnClick);
-    btnLogInMobile.addEventListener('click', onOpenBtnClick);
+  }
+
+  if (popupLogIn) {
+    btnLogIn.addEventListener('click', onOpenLogInBtnClick);
+    btnLogInMobile.addEventListener('click', onOpenLogInBtnClick);
 
     window.addEventListener('DOMContentLoaded', function () {
       if (inputEmail) {

@@ -70,6 +70,14 @@
 .swiper-button-next {
   top: 22%;
 
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
   @include tablets {
     top: 120px;
   }
@@ -119,6 +127,14 @@
   font-size: 16px;
   line-height: 130%;
   color: $grey-placeholder;
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .swiper-pagination-bullet-active {
@@ -188,6 +204,10 @@
   @include tablets {
     padding-bottom: 67px;
   }
+
+  @include phones {
+    padding-bottom: 62px;
+  }
 }
 
 .swiper_product-card .swiper-button-prev,
@@ -195,7 +215,7 @@
   top: 21%;
 
   @include tablets {
-    top: 118px;
+    top: 108px;
   }
 }
 

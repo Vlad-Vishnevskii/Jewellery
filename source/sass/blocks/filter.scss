@@ -22,8 +22,6 @@
 }
 
 .filter__type:first-of-type {
-  padding-bottom: 13px;
-
   @include tablets {
     border-top: none;
     padding-bottom: 40px;
@@ -38,7 +36,7 @@
   padding-bottom: 3px;
 
   @include tablets {
-    padding-bottom: 34px;
+    padding-bottom: 20px;
   }
 
   @include phones {
@@ -94,6 +92,11 @@
   display: none;
   padding-top: 10px;
   padding-left: 32px;
+  padding-bottom: 18px;
+
+  @include tablets {
+    padding-bottom: 0;
+  }
 }
 
 .filter__icon {
@@ -259,7 +262,6 @@
   margin-top: 13px;
   padding-left: 16px;
   padding-right: 26px;
-  padding-bottom: 14px;
   font-family: $base-font;
   font-style: normal;
   font-weight: 500;
@@ -281,12 +283,12 @@
 }
 
 .filter__apply-btn {
-  margin-top: 38px;
+  margin-top: 34px;
 
   @include tablets {
     width: 362px;
     margin-left: 21px;
-    margin-top: 40px;
+    margin-top: 53px;
   }
 
   @include phones {

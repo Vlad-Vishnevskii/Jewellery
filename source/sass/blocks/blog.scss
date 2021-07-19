@@ -20,9 +20,7 @@
 }
 
 .blog__link {
-  @include tablets {
-    padding-bottom: 3px;
-  }
+  padding-bottom: 3px;
 }
 
 .blog__card-list {
@@ -182,10 +180,12 @@
   height: 47%;
   bottom: 0;
   right: 0;
+  padding-top: 50px;
 
   @include tablets {
     position: static;
     height: auto;
+    padding-top: 36px;
   }
 }
 
@@ -231,14 +231,6 @@
 
 .blog__card-item a {
   padding-bottom: 3px;
-}
-
-.blog__card-item_big .blog__card-info {
-  padding-top: 50px;
-
-  @include tablets {
-    padding-top: 36px;
-  }
 }
 
 .blog__card-item_big p {
