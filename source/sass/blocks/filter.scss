@@ -28,7 +28,7 @@
   }
 
   @include phones {
-    padding-bottom: 30px;
+    padding-bottom: 26px;
   }
 }
 
@@ -85,6 +85,10 @@
     margin-top: 14px;
     margin-bottom: 18px;
     padding-left: 10px;
+  }
+
+  @include phones {
+    margin-top: 19px;
   }
 }
 
@@ -291,6 +295,7 @@
   }
 
   @include phones {
+    margin-top: 15px;
     padding-left: 4px;
     padding-right: 44px;
     padding-bottom: 0;
@@ -325,7 +330,7 @@
 
   @include phones {
     width: 230px;
-    margin-top: 16px;
+    margin-top: 19px;
   }
 }
 
@@ -342,6 +347,11 @@
     border-radius: 50%;
     border: none;
     background-color: $black;
+  }
+
+  @include phones {
+    top: -10px;
+    right: -10px;
   }
 }
 

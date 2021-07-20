@@ -71,7 +71,7 @@
 
 .product-card__gallery-item_big {
   grid-column: 2/3;
-  grid-row: 1/3;
+  grid-row: 1/4;
 
   @include tablets {
     grid-column: 1/-1;
