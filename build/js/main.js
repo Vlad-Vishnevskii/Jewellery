@@ -89,6 +89,7 @@
   var filterMobileNoJs = document.querySelectorAll('.catalog__filter-mobile_no-js');
   var catalogNoJs = document.querySelectorAll('.catalog_no-js');
   var filterBtnMobileNoJs = document.querySelectorAll('.catalog__filter-btn-mobile_no-js');
+  var filterTypeNoJs = document.querySelectorAll('.filter__type_no-js');
 
   function deleteNoJS() {
     for (var i = 0; i < accordionsNoJS.length; i++) {
@@ -111,6 +112,10 @@
 
     for (var y = 0; y < filterBtnMobileNoJs.length; y++) {
       filterBtnMobileNoJs[y].classList.remove('catalog__filter-mobile_no-js');
+    }
+
+    for (var c = 0; c < filterTypeNoJs.length; c++) {
+      filterTypeNoJs[c].classList.remove('filter__type_no-js');
     }
   }
 

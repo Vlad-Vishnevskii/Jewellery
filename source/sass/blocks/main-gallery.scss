@@ -48,6 +48,7 @@
   display: grid;
   grid-template-columns: 230px 399px 230px 230px;
   grid-template-rows: 230px 150px;
+  grid-auto-rows: 230px;
   column-gap: 27px;
   row-gap: 34px;
   justify-content: center;

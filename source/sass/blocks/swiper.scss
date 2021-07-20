@@ -9,8 +9,22 @@
   }
 }
 
-.swiper_no-js {
-  display: none;
+.swiper_no-js .swiper-slide {
+  width: auto;
+  height: auto;
+  margin-left: 30px;
+
+  @include tablets {
+    width: 324px;
+  }
+
+  @include phones {
+    width: 130px;
+  }
+}
+
+.swiper_no-js .swiper-slide:first-of-type {
+  margin-left: 0;
 }
 
 .swiper h2 {
@@ -59,6 +73,11 @@
 .swiper-container_no-js img {
   width: 70%;
   height: auto;
+}
+
+.swiper a {
+  color: $black;
+  text-decoration: none;
 }
 
 .swiper-slide p {

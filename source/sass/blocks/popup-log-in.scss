@@ -96,6 +96,14 @@
   border: none;
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
+
   @include phones {
     top: 14px;
     right: 9px;
@@ -189,6 +197,14 @@
   font-size: 14px;
   line-height: 21px;
   color: $black;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
 }
 
 .popup-log-in__form-field input::placeholder {

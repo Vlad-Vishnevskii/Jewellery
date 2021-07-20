@@ -52,6 +52,14 @@
   font-size: 16px;
   line-height: 130%;
 
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
   @include tablets {
     margin-top: 0;
     margin-bottom: 0;
@@ -125,7 +133,8 @@
   }
 }
 
-.filter__type_active .filter__content {
+.filter__type_active .filter__content,
+.filter__type_no-js .filter__content {
   display: block;
 }
 
@@ -141,6 +150,7 @@
   font-size: 14px;
   line-height: 130%;
   color: $black;
+  cursor: pointer;
 
   @include tablets {
     font-size: 16px;
@@ -162,9 +172,6 @@
   border: 1px solid $brown;
   width: 16px;
   height: 16px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 50%;
   cursor: pointer;
 
   @include tablets {
@@ -172,6 +179,14 @@
     width: 18px;
     height: 18px;
   }
+}
+
+.filter__field input:hover + label::before {
+  opacity: 0.5;
+}
+
+.filter__field input:focus + label::before {
+  opacity: 0.3;
 }
 
 .filter__field input:checked + label::before {

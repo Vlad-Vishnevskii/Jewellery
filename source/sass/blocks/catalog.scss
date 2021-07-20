@@ -23,13 +23,14 @@
   list-style: none;
 
   @include desktop-min {
-    margin-left: -35px;
-    justify-content: center;
+    margin-left: -18px;
+    justify-content: flex-start;
   }
 
   @include tablets {
     padding: 0;
     margin-left: -30px;
+    justify-content: center;
   }
 }
 

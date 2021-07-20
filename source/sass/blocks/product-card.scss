@@ -163,6 +163,14 @@
   line-height: 130%;
   color: $grey-placeholder;
 
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
+
   @include phones {
     margin-right: 35px;
   }

@@ -233,7 +233,7 @@
 
 .header__mobile-menu_no-js {
   @include tablets {
-    height: 77vh;
+    height: auto;
     background-color: $brown;
     padding-bottom: 80px;
   }
