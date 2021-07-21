@@ -94,7 +94,15 @@
   width: 370px;
 
   @include desktop-min {
-    width: auto;
+    width: 70%;
+  }
+
+  @include tablets {
+    width: 80%;
+  }
+
+  @include phones {
+    width: 64%;
   }
 }
 

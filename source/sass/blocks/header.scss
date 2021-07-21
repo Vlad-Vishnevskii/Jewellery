@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
-  padding-bottom: 18px;
+  padding-bottom: 25px;
   font-family: $base-font;
   font-style: normal;
   font-weight: 500;
@@ -11,12 +11,26 @@
   color: $black;
 
   @include tablets {
-    padding-bottom: 23px;
+    padding-bottom: 30px;
     align-items: flex-start;
   }
 
   @include phones {
-    padding-bottom: 14px;
+    padding-bottom: 21px;
+  }
+}
+
+.header__to-index-link {
+  display: flex;
+  margin-top: 10px;
+  margin-right: 59px;
+
+  @include tablets {
+    margin-right: 11px;
+  }
+
+  @include phones {
+    margin-top: 0;
   }
 }
 
@@ -67,17 +81,10 @@
 
 .header__svg-logo {
   fill: $brown;
-  margin-top: 10px;
-  margin-right: 59px;
-
-  @include tablets {
-    margin-right: 11px;
-  }
 
   @include phones {
     width: 52px;
     height: 52px;
-    margin-top: 0;
   }
 }
 

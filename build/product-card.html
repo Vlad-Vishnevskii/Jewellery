@@ -33,7 +33,7 @@
           </label>
           <input type="text" id="search" placeholder="Type here to search">
         </div>
-        <a href="index.html">
+        <a class="header__to-index-link" inert="" href="index.html">
           <svg class="header__svg-logo" width="66" height="66">
             <use xlink:href="img/sprite_auto.svg#logo"></use>
           </svg>
@@ -112,8 +112,9 @@
     </div>
   </header>
 
-  <main>
+  <main inert="">
     <section class="product-card">
+      <h1>Product page</h1>
       <div class="product-card__wrapper container">
         <ul class="product-card__gallery-list">
           <li class="product-card__gallery-item">
@@ -154,8 +155,8 @@
           <h2>Gold Necklace</h2>
           <p class="product-card__price"><span class="product-card__currency">$</span>115</p>
           <div class="product-card__info-btn">
-            <button class="product-card__btn">Description</button>
-            <button class="product-card__btn product-card__btn_active">Additional info</button>
+            <a href="#" class="product-card__btn">Description</a>
+            <a href="#" class="product-card__btn product-card__btn_active">Additional info</a>
           </div>
           <div class="product-card__description-item">
             <span class="product-card__description-name">Metal type</span>
@@ -348,7 +349,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" inert="">
     <div class="footer__wrapper container">
       <div class="footer__left">
         <h2>
@@ -493,7 +494,7 @@
       </div>
       <div class="popup-to-cart__modal-buttons">
         <a href="catalog.html" class="button">Continue shopping</a>
-        <a class="button">Checkout</a>
+        <a href="#" class="button">Checkout</a>
       </div>
     </div>
   </div>

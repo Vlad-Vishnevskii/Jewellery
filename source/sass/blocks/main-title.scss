@@ -79,6 +79,22 @@
   @include retina {
     background-image: url("../img/catalog-bg-desk@2x.png");
   }
+
+  @include tablets {
+    background-image: url("../img/catalog-bg-tablet@1x.png");
+
+    @include retina {
+      background-image: url("../img/catalog-bg-tablet@2x.png");
+    }
+  }
+
+  @include phones {
+    background-image: url("../img/catalog-bg-mobile@1x.png");
+
+    @include retina {
+      background-image: url("../img/catalog-bg-mobile@2x.png");
+    }
+  }
 }
 
 .main-title_catalog h1 {

@@ -1,8 +1,4 @@
-.accordion__trigger {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+.accordion {
   &:focus {
     opacity: 0.8;
   }
@@ -10,6 +6,12 @@
   &:hover {
     opacity: 0.5;
   }
+}
+
+.accordion__trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .accordion__off {

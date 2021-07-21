@@ -32,7 +32,7 @@
 
   const swiper = new Swiper('.swiper-container', {
     // Optional parameters
-    loop: true,
+    // loop: true,
 
     breakpoints: {
       // when window width is >= 320px
@@ -72,7 +72,7 @@
   var paginationMobileStartIndex = document.querySelector('.swiper-pagination-mobile__start-index');
 
   if (paginationMobileLength && paginationMobileStartIndex) {
-    paginationMobileLength.textContent = (swiper.slides.length - 4) / 2;
+    paginationMobileLength.textContent = (swiper.slides.length) / 2;
 
     swiper.on('transitionEnd', function () {
       paginationMobileStartIndex.textContent = (swiper.realIndex / 2) + 1;
