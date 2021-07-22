@@ -88,6 +88,13 @@
   font-size: 16px;
   line-height: 130%;
   color: $black;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  text-align: center;
+
+  @include phones {
+    margin-top: 11px;
+  }
 }
 
 .swiper-slide p {
@@ -173,16 +180,6 @@
 
 .swiper-pagination-bullet-active {
   color: $black;
-}
-
-.swiper-slide h3 {
-  margin-top: 15px;
-  margin-bottom: 5px;
-  text-align: center;
-
-  @include phones {
-    margin-top: 11px;
-  }
 }
 
 .swiper-slide img {
