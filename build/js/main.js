@@ -245,9 +245,30 @@
   var formFieldEmailWrapper = document.querySelector('.popup-log-in__form-field_email');
   var inputEmail = formFieldEmailWrapper.querySelector('input');
   var btnLogInMobile = document.querySelector('.header__mobile-link-login');
+  var popupLoginForm = popupLogIn.querySelector('form');  
+
+  var lastElem = popupLoginForm.elements[popupLoginForm.elements.length - 1];
+  var firstElem = popupLoginForm.elements[0];  
+
+      lastElem.onkeydown = function(e) {
+        if (e.key == 'Tab' && !e.shiftKey) {
+          firstElem.focus();
+          return false;
+        }
+      };
+
+      firstElem.onkeydown = function(e) {
+        if (e.key == 'Tab' && e.shiftKey) {
+          lastElem.focus();
+          return false;
+        }
+      };
+
+      // container.style.display = 'block';
+      // form.elements.text.focus();
 
   function openPopupLogIn() {
-    popupLogIn.classList.add('popup-log-in_open');
+    popupLogIn.classList.add('popup-log-in_open');    
     body.classList.add('disable-scrolling-js');
     logInCloseBtn.addEventListener('click', onCloseButtonClickLogIn);
     document.addEventListener('keydown', onEscapePressLogIn);
