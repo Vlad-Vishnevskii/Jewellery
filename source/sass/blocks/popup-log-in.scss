@@ -7,7 +7,7 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  z-index: 9000;
+  z-index: 10;
   background-color: $modal-background;
   color: $black;
 
@@ -147,6 +147,8 @@
 }
 
 .popup-log-in form {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding-top: 2px;
   padding-left: 45px;
@@ -261,6 +263,7 @@
   line-height: 21px;
   color: $grey-placeholder;
   text-align: center;
+  order: 10;
 }
 
 .popup-log-in__sign-up {

@@ -268,13 +268,13 @@
   <div class="popup-log-in">
     <div class="popup-log-in__modal">
       <div class="popup-log-in__background"></div>
-      <button type="button" class="popup-log-in__close-btn">
-        <svg class="popup-log-in__icon-close" width="14" height="14">
-          <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-        </svg>
-      </button>
       <h2>Log In</h2>
       <form action="https://echo.htmlacademy.ru">
+        <button type="button" class="popup-log-in__close-btn">
+          <svg class="popup-log-in__icon-close" width="14" height="14">
+            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+          </svg>
+        </button>
         <div class="popup-log-in__form-field popup-log-in__form-field_email">
           <label for="mail">email</label>
           <input type="email" id="mail" placeholder="Your E-mail" name="email" required="">
@@ -284,8 +284,8 @@
           <input type="password" id="password" name="password" placeholder="Password" required="">
           <a href="#">Forgot your password?</a>
         </div>
-        <button class="popup-log-in__log-in-btn button" type="submit">Log In</button>
         <p>Don’t have an account? <a class="popup-log-in__sign-up" href="#">Sign up</a></p>
+        <button class="popup-log-in__log-in-btn button" type="submit">Log In</button>
       </form>
     </div>
   </div>

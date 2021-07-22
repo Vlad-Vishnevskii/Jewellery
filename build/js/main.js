@@ -195,12 +195,33 @@
   var toCartCloseBtn = document.querySelector('.popup-to-cart__close-btn');
   var escape = 27;
 
+  if (popupToCart) {
+    var popupToCartForm = popupToCart.querySelector('form');
+    var lastElemToCart = popupToCartForm.elements[popupToCartForm.elements.length - 1];
+    var firstElemToCart = popupToCartForm.elements[0];
+
+    lastElemToCart.onkeydown = function(e) {
+      if (e.key == 'Tab' && !e.shiftKey) {
+        firstElemToCart.focus();
+        return false;
+      }
+    };
+
+    firstElemToCart.onkeydown = function(e) {
+      if (e.key == 'Tab' && e.shiftKey) {
+        lastElemToCart.focus();
+        return false;
+      }
+    };
+  }
+
   function openPopupToCart() {
     popupToCart.classList.add('popup-to-cart_open');
     body.classList.add('disable-scrolling-js');
     toCartCloseBtn.addEventListener('click', onCloseButtonToCartClick);
     document.addEventListener('keydown', onEscapePress);
     popupToCart.addEventListener('click', onOverlayToCartClick);
+    toCartCloseBtn.focus();
   }
 
   function closePopupToCart() {
@@ -245,30 +266,29 @@
   var formFieldEmailWrapper = document.querySelector('.popup-log-in__form-field_email');
   var inputEmail = formFieldEmailWrapper.querySelector('input');
   var btnLogInMobile = document.querySelector('.header__mobile-link-login');
-  var popupLoginForm = popupLogIn.querySelector('form');  
+  var popupLoginForm = popupLogIn.querySelector('form');
 
-  var lastElem = popupLoginForm.elements[popupLoginForm.elements.length - 1];
-  var firstElem = popupLoginForm.elements[0];  
+  if (popupLogIn) {
+    var lastElem = popupLoginForm.elements[popupLoginForm.elements.length - 1];
+    var firstElem = popupLoginForm.elements[0];
 
-      lastElem.onkeydown = function(e) {
-        if (e.key == 'Tab' && !e.shiftKey) {
-          firstElem.focus();
-          return false;
+    lastElem.onkeydown = function(e) {
+      if (e.key == 'Tab' && !e.shiftKey) {
+        firstElem.focus();
+        return false;
         }
       };
 
-      firstElem.onkeydown = function(e) {
-        if (e.key == 'Tab' && e.shiftKey) {
-          lastElem.focus();
-          return false;
-        }
-      };
-
-      // container.style.display = 'block';
-      // form.elements.text.focus();
+    firstElem.onkeydown = function(e) {
+      if (e.key == 'Tab' && e.shiftKey) {
+        lastElem.focus();
+        return false;
+      }
+    };
+  }
 
   function openPopupLogIn() {
-    popupLogIn.classList.add('popup-log-in_open');    
+    popupLogIn.classList.add('popup-log-in_open');
     body.classList.add('disable-scrolling-js');
     logInCloseBtn.addEventListener('click', onCloseButtonClickLogIn);
     document.addEventListener('keydown', onEscapePressLogIn);
